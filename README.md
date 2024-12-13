@@ -1,8 +1,42 @@
-# React + Vite
+# Dual-Interface Application (Web & Desktop)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **dual-interface application** designed for GUI Programming. It includes a **Web App** developed using ReactJS with Vite and a **Desktop App** built with C# that connects to a database. The application is intended to showcase both web and desktop interfaces interacting with a centralized database.
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application consists of two parts:
+
+### Web App (ReactJS)
+
+- A user-friendly web interface built with ReactJS.
+- Fast and efficient development using Vite.
+- Designed to provide users with an intuitive experience for interacting with the application via the browser.
+
+### Desktop App (C#)
+
+- A desktop application built with C# and integrated with a database (SQL/NoSQL).
+- This part of the project handles the data storage and retrieval operations, ensuring seamless interaction between the user interface and the database.
+
+The web app communicates with the desktop app and database to perform tasks such as viewing, adding, editing, or deleting data. Both interfaces are designed to offer complementary functionalities to users based on their preferences (web or desktop).
+
+## Features
+
+- **Web App**:
+  - Built using ReactJS and Vite for fast rendering and development.
+  - Allows users to interact with the system through a browser interface.
+  - Real-time updates and user-friendly UI.
+- **Desktop App**:
+  - Developed using C# with database connectivity.
+  - Handles all backend data processing and storage.
+  - Provides additional features that may be more suitable for desktop users.
+
+## Technologies Used
+
+- **Frontend**:
+  - ReactJS
+  - Vite
+  - HTML, CSS, JavaScript
+- **Backend**:
+  - C#
+  - SQL/NoSQL Database
+- **Version Control**: GitHub
