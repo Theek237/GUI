@@ -1,0 +1,47 @@
+* {
+  background-color: #e9eff6;
+  color: #1f2128;
+  margin: 0;
+  padding: 0;
+}
+
+.leftSide {
+  margin-left: 148px;
+  margin-top: 240px;
+}
+
+.leftSide h1 span {
+  color: #1db19f;
+}
+
+.welcome {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.leftSide p {
+  color: #1f2128;
+  width: 550px;
+  margin-top: 15px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightSide img {
+  width: 400px;
+}
+
+.rightSide {
+  margin-right: 148px;
+  margin-top: 200px;
+}

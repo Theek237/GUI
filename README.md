@@ -38,5 +38,6 @@ The web app communicates with the desktop app and database to perform tasks such
   - HTML, CSS, JavaScript
 - **Backend**:
   - C#
+  - WPF
   - SQL/NoSQL Database
 - **Version Control**: GitHub
