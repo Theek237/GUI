@@ -7,7 +7,7 @@
 
 .leftSide {
   margin-left: 148px;
-  margin-top: 240px;
+  margin-top: 170px;
 }
 
 .leftSide h1 span {
@@ -15,15 +15,18 @@
 }
 
 .welcome {
-  font-size: 56px;
+  font-size: 3.6rem;
   font-weight: 800;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.08rem;
 }
 
 .leftSide p {
   color: #1f2128;
   width: 550px;
   margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: -0.015rem;
 }
 
 .buttons {
@@ -38,10 +41,10 @@
 }
 
 .rightSide img {
-  width: 400px;
+  width: 450px;
 }
 
 .rightSide {
-  margin-right: 148px;
-  margin-top: 200px;
+  margin-right: 130px;
+  margin-top: 110px;
 }

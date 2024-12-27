@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
-import ButtonOne from "../Components/ButtonOne";
-import ButtonTwo from "../Components/ButtonTwo";
+import ButtonOne from "../../Components/ButtonOne/ButtonOne";
+import ButtonTwo from "../../Components/ButtonTwo/ButtonTwo";
 
 export default function Home() {
   return (
