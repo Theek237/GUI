@@ -1,0 +1,91 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 9rem;
+}
+
+.signup-leftside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-title {
+  text-align: center; /* Ensure all child elements are centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center child elements horizontally */
+}
+
+.signup-title h1 {
+  text-align: center;
+  color: var(--Darker, #1f2128);
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.135rem;
+}
+
+.signup-title span {
+  color: #1db19f;
+  text-align: center;
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.135rem;
+}
+.signup-title h2 {
+  width: 22.875rem;
+  color: #1f2128;
+  text-align: center;
+
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+.signup-rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.44rem;
+
+  margin-bottom: 3rem;
+}
+
+.signup-btn {
+  width: 27.875rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: #1db19f;
+  border: none;
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.linktosignin {
+  margin-top: 1.44rem;
+  color: rgba(31, 33, 40, 0.7);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.linktosignin span a {
+  color: #1db19f;
+}

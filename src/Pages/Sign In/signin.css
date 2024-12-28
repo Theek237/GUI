@@ -50,36 +50,6 @@
   margin-bottom: 3.25rem;
 }
 
-.inputbox {
-  width: 27.875rem;
-  height: 3.0625rem;
-  flex-shrink: 0;
-  border-radius: 0.625rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #fff;
-  color: rgba(36, 39, 49, 0.7);
-
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: 70px;
-}
-
-.input-email,
-.input-password {
-  position: relative;
-  width: 100%;
-}
-
-.input-icon {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  background: none;
-}
-
 .signin-btn {
   width: 27.875rem;
   height: 3.75rem;
