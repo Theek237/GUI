@@ -1,0 +1,111 @@
+.signin-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+  gap: 9rem;
+}
+
+.signin-rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-title h1 {
+  text-align: center;
+  color: var(--Darker, #1f2128);
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.135rem;
+}
+
+.signin-title span {
+  color: #1db19f;
+  text-align: center;
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.135rem;
+}
+
+.signin-title h2 {
+  width: 22.875rem;
+  color: #1f2128;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.signin-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.44rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3.25rem;
+}
+
+.inputbox {
+  width: 27.875rem;
+  height: 3.0625rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  color: rgba(36, 39, 49, 0.7);
+
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 70px;
+}
+
+.input-email,
+.input-password {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background: none;
+}
+
+.signin-btn {
+  width: 27.875rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: #1db19f;
+  border: none;
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.linktosignup {
+  margin-top: 1.44rem;
+  color: rgba(31, 33, 40, 0.7);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.linktosignup span a {
+  color: #1db19f;
+}
