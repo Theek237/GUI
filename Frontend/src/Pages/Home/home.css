@@ -1,0 +1,70 @@
+* {
+  background-color: #e9eff6;
+  color: #1f2128;
+  margin: 0;
+  padding: 0;
+}
+
+.leftSide {
+  margin-left: 148px;
+  margin-top: 10rem;
+}
+
+.leftside h1 {
+  color: #1f2128;
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.5rem;
+}
+
+.leftSide h1 span {
+  background: linear-gradient(90deg, #1db19f 0%, #00cdb4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.2rem;
+}
+
+.welcome {
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: -0.08rem;
+}
+
+.leftSide p {
+  color: #1f2128;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 3rem;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightSide img {
+  width: 450px;
+}
+
+.rightSide {
+  margin-right: 130px;
+  margin-top: 110px;
+}
