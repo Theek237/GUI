@@ -1,7 +1,7 @@
-GUI Project
+#GUI Project#
 
 Learning Management System
 
-Frontend : ReactJS, HTML, CSS
+Frontend : ReactJS
 Backend : NodeJs, ExpressJS
 Database : MySQL
