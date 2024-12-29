@@ -24,7 +24,7 @@ export default function AddStudent() {
     }
     setError("");
     axios
-      .post("http://localhost:3001/student", values)
+      .post("http://localhost:3001/api/student", values)
       .then((res) => {
         console.log(res);
         navigate("/about");

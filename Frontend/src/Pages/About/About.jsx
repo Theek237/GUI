@@ -10,7 +10,7 @@ export default function About() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/student")
+      .get("http://localhost:3001/api/student")
       .then((res) => {
         console.log("API Response:", res.data);
         SetData(res.data);
@@ -46,15 +46,35 @@ export default function About() {
                     <td>{student.StudentEmail}</td>
                     <td>{student.StudentMobileNo}</td>
                     <td>
-                      <Link to={`/studentread/${student.StudentID}`}>
+                      <Link to={`/student/${student.StudentID}`}>
                         <button className="read-btn">Read</button>
                       </Link>
                       <Link to="/studentedit">
                         <button className="edit-btn">Edit</button>
                       </Link>
-                      <Link to="/studentdelete">
-                        <button className="delete-btn">Delete</button>
-                      </Link>
+
+                      <button
+                        className="delete-btn"
+                        onClick={() => {
+                          axios
+                            .delete(
+                              `http://localhost:3001/api/student/${student.StudentID}`
+                            )
+                            .then(() => {
+                              alert("Student Deleted Successfully");
+                              SetData(
+                                data.filter(
+                                  (item) => item.StudentID !== student.StudentID
+                                )
+                              );
+                            })
+                            .catch((err) =>
+                              console.error("Error deleting student:", err)
+                            );
+                        }}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 ))
