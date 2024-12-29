@@ -10,7 +10,7 @@ export default function About() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/")
+      .get("http://localhost:3001/student")
       .then((res) => {
         console.log("API Response:", res.data);
         SetData(res.data);
@@ -23,7 +23,9 @@ export default function About() {
       <Header />
       <div>Backend Testing</div>
       <div className="crud">
-        <div className="create-btn">Create</div>
+        <Link to={"/createstd"}>
+          <div className="create-btn">Create</div>
+        </Link>
         <div className="table">
           <table>
             <thead>
@@ -44,8 +46,15 @@ export default function About() {
                     <td>{student.StudentEmail}</td>
                     <td>{student.StudentMobileNo}</td>
                     <td>
-                      <button>Edit</button>
-                      <button>Delete</button>
+                      <Link to={`/studentread/${student.StudentID}`}>
+                        <button className="read-btn">Read</button>
+                      </Link>
+                      <Link to="/studentedit">
+                        <button className="edit-btn">Edit</button>
+                      </Link>
+                      <Link to="/studentdelete">
+                        <button className="delete-btn">Delete</button>
+                      </Link>
                     </td>
                   </tr>
                 ))

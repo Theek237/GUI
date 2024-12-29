@@ -4,6 +4,7 @@ import ButtonOne from "../../Components/ButtonOne/ButtonOne";
 import ButtonTwo from "../../Components/ButtonTwo/ButtonTwo";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -20,8 +21,12 @@ export default function Home() {
             goals—all in one intuitive platform. Start your journey today!
           </p>
           <div className="buttons">
-            <ButtonOne text="Sign Up" />
-            <ButtonTwo text="Sign In" />
+            <Link to={"/choosesignup"}>
+              <ButtonOne text="Sign Up" />
+            </Link>
+            <Link to={"/choosesignin"}>
+              <ButtonTwo text="Sign In" />
+            </Link>
           </div>
         </div>
         <div className="rightSide">

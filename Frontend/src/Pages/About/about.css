@@ -1,14 +1,13 @@
 .table {
-  margin: 20px auto;
+  margin: 10px auto;
   width: 80%;
   border-collapse: collapse;
-
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .table table {
   width: 100%;
-  border: 1px solid #e9eff6;
+  border: 1px solid #ffffff;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -25,40 +24,51 @@
   font-weight: bold;
 }
 
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.table td button {
+.read-btn {
   padding: 5px 10px;
   margin: 0 5px;
   border: none;
   border-radius: 4px;
-  background-color: #2196f3;
+  background-color: #1db19f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.edit-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00223e;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.table td button:hover {
-  background-color: #1976d2;
-}
-
-.table td button:nth-child(2) {
+.delete-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
   background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.read-btn:hover {
+  background-color: #008273;
+}
+.edit-btn:hover {
+  background-color: #000000;
 }
 
-.table td button:nth-child(2):hover {
+.delete-btn:hover {
   background-color: #d32f2f;
 }
 
 .create-btn {
-  margin: 20px auto;
-  padding: 10px 20px;
+  padding: 8px 13px;
+  margin-right: 135px;
   background-color: #1db19f;
   color: white;
   border: none;
@@ -71,6 +81,13 @@
 .crud {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-end;
+  gap: 1px;
+}
+
+.create-btn:hover {
+  background-color: #00887a;
+}
+.crud a {
+  text-decoration: none;
 }

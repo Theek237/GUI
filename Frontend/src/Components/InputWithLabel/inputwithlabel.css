@@ -1,0 +1,26 @@
+.inputwithlabel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.inputwithlabel-container label {
+  color: var(--Darker, #1f2128);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.62rem;
+}
+
+.inputwithlabel-container input {
+  width: 46.6875rem;
+  height: 3rem;
+  flex-shrink: 0;
+
+  border-radius: 0.4375rem;
+  background: #fff;
+  border: none;
+  margin-bottom: 1.94rem;
+  padding-left: 1rem;
+}
