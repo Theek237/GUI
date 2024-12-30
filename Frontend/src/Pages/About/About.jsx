@@ -23,7 +23,7 @@ export default function About() {
       <Header />
       <div>Backend Testing</div>
       <div className="crud">
-        <Link to={"/createstd"}>
+        <Link to={"/studentcreate"}>
           <div className="create-btn">Create</div>
         </Link>
         <div className="table">

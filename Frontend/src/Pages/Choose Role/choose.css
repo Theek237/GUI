@@ -1,5 +1,5 @@
 .choose-text {
-  margin-top: 8.06rem;
+  margin-top: 5rem;
   text-align: center;
   color: var(--Less-Dark, #242731);
 
@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   gap: 3.4375rem;
-  margin-top: 4.5rem;
+  margin-top: 4rem;
 }
 .choose-box {
   width: 10.9375rem;
@@ -31,4 +31,21 @@
   background: none;
   width: 7.4375rem;
   height: 7.4375rem;
+}
+.teacherbtn,
+.studentbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.19rem;
+}
+
+.teacherbtn h2,
+.studentbtn h2 {
+  color: var(--Darker, #1f2128);
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }

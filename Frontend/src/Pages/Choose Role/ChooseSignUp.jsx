@@ -11,20 +11,23 @@ export default function ChooseSignUp() {
       <div className="choose-container">
         <div className="choose-text">Sign Up to EduVerse as a</div>
         <div className="choose-buttons">
-          <Link to={"/teachersignup"}>
-            <div className="teacherbtn">
+          <div className="teacherbtn">
+            <Link to={"/teachersignup"}>
               <div className="choose-box">
                 <img src="src\assets\teacher.png" alt="teacher" />
               </div>
-            </div>
-          </Link>
-          <Link to={"/studentsignup"}>
-            <div className="studentbtn">
+            </Link>
+            <h2>Teacher</h2>
+          </div>
+
+          <div className="studentbtn">
+            <Link to={"/studentsignup"}>
               <div className="choose-box">
                 <img src="src\assets\student.png" alt="student" />
               </div>
-            </div>
-          </Link>
+            </Link>
+            <h2>Student</h2>
+          </div>
         </div>
       </div>
       <Footer />

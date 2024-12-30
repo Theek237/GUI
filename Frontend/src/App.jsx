@@ -9,6 +9,8 @@ import ChooseSignIn from "./Pages/Choose Role/ChooseSignIn";
 import ChooseSignUp from "./Pages/Choose Role/ChooseSignUp";
 import TeacherSignIn from "./Pages/Teacher/TeacherSignIn";
 import TeacherSignUp from "./Pages/Teacher/TeacherSignUp";
+import StudentDashboard from "./Pages/Student/StudentDashboard";
+import TeacherDashboard from "./Pages/Teacher/TeacherDashboard";
 
 function App() {
   return (
@@ -21,9 +23,17 @@ function App() {
           <Route path="/studentsignin" element={<StudentSignIn />}></Route>
           <Route path="/teachersignin" element={<TeacherSignIn />}></Route>
           <Route path="/teachersignup" element={<TeacherSignUp />}></Route>
-          <Route path="/createstd" element={<AddStudent />}></Route>
+          <Route path="/studentcreate" element={<AddStudent />}></Route>
           <Route path="/choosesignin" element={<ChooseSignIn />}></Route>
           <Route path="/choosesignup" element={<ChooseSignUp />}></Route>
+          <Route
+            path="/studentdashboard"
+            element={<StudentDashboard />}
+          ></Route>
+          <Route
+            path="/teacherdashboard"
+            element={<TeacherDashboard />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </>
