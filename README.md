@@ -32,7 +32,7 @@
 
 <ol>
   <li>Clone the repository:
-    <pre><code>git clone https://github.com/your-repository/lms-project.git</code></pre>
+    
   </li>
   <li>Install dependencies:
     <ul>
@@ -46,7 +46,7 @@
   </li>
   <li>Set up the database:
     <ul>
-      <li>Configure a MySQL database and import the provided schema in <code>database/</code>.</li>
+      <li>Configure a MySQL database and import the provided schema.</li>
     </ul>
   </li>
   <li>Start the servers:
