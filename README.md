@@ -31,7 +31,7 @@
 <h2>🔧 Installation & Setup</h2>
 
 <ol>
-  <li>Clone the repository:
+  <li>Clone the repository.
     
   </li>
   <li>Install dependencies:
