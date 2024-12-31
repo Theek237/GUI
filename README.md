@@ -1,60 +1,55 @@
-<h1 align="center">Learning Management System (LMS)</h1>
+<br clear="both">
 
-<p align="center">
-  This project is a <strong>simple Learning Management System (LMS)</strong> designed to demonstrate the integration of modern web technologies in creating a user-friendly and functional application.
-</p>
+<h1 align="center">Hey, I'm Theekshana Alahakoon.</h1>
 
----
+###
 
-<h2>🚀 Technologies Used</h2>
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40" alt="c logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" alt="cplusplus logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" alt="express logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" alt="mongodb logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" height="40" alt="dot-net logo"  />
+</div>
 
-<h3>Frontend</h3>
-<ul>
-  <li><strong>ReactJS</strong></li>
-</ul>
+###
 
-<h3>Backend</h3>
-<ul>
-  <li><strong>Node.js</strong></li>
-  <li><strong>Express.js</strong></li>
-</ul>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Theek237&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Theek237&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
+</div>
 
-<h3>Database</h3>
-<ul>
-  <li><strong>MySQL</strong></li>
-</ul>
+###
 
----
+<div align="left">
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/whatsapp/default.svg" width="52" height="40" alt="whatsapp logo"  />
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="facebook logo"  />
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg" width="52" height="40" alt="discord logo"  />
+</div>
 
----
-
-<h2>🔧 Installation & Setup</h2>
-
-<ol>
-  <li>Clone the repository.
-    
-  </li>
-  <li>Install dependencies:
-    <ul>
-      <li>Navigate to the <code>frontend</code> directory and run:
-        <pre><code>npm install</code></pre>
-      </li>
-      <li>Navigate to the <code>backend</code> directory and run:
-        <pre><code>npm install</code></pre>
-      </li>
-    </ul>
-  </li>
-  <li>Set up the database:
-    <ul>
-      <li>Configure a MySQL database and import the provided schema.</li>
-    </ul>
-  </li>
-  <li>Start the servers:
-    <ul>
-      <li>Frontend: <code>npm run dev</code> in the <code>frontend/</code> directory.</li>
-      <li>Backend: <code>npm start</code> in the <code>backend/</code> directory.</li>
-    </ul>
-  </li>
-</ol>
-
----
+###
