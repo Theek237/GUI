@@ -1,6 +1,6 @@
 import React from "react";
 import "./studentcourses.css";
-import SideBar from "../../Components/SideBar/SideBar";
+import SideBar from "../../Components/StudentSideBar/StudentSideBar";
 
 export default function StudentCourses() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import EduVerseLogo from "../../assets/EduVerse.png";
-import "./sidebar.css";
+import "./teachersidebar.css";
 import { Link, NavLink } from "react-router-dom";
 
-export default function SideBar() {
+export default function TeacherSideBar() {
   return (
     <>
       <div className="sidebar-container">
@@ -14,23 +14,23 @@ export default function SideBar() {
         <div className="section-list">
           <ul>
             <li>
-              <NavLink to={"/student/dashboard"}>Dashboard</NavLink>
+              <NavLink to={"/teacher/dashboard"}>Dashboard</NavLink>
             </li>
 
             <li>
-              <NavLink to={"/student/mycourses"}>My Courses</NavLink>
+              <NavLink to={"/teacher/courses"}>Courses</NavLink>
             </li>
             <li>
-              <NavLink to={"/student/allcourses"}>All Courses</NavLink>
+              <NavLink to={"/teacher/assignments"}>Assignments</NavLink>
             </li>
             <li>
-              <NavLink to={"/student/assignments"}>Assignments</NavLink>
+              <NavLink to={"/teacher/announsments"}>Announsments</NavLink>
             </li>
             <li>
-              <NavLink to={"/student/messages"}>Messages</NavLink>
+              <NavLink to={"/teacher/students"}>Stundets</NavLink>
             </li>
             <li>
-              <NavLink to={"/student/settings"}>Settings</NavLink>
+              <NavLink to={"/teacher/settings"}>Settings</NavLink>
             </li>
           </ul>
         </div>

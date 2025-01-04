@@ -1,6 +1,6 @@
 import React from "react";
 import "./studentdashboard.css";
-import SideBar from "../../Components/SideBar/SideBar";
+import SideBar from "../../Components/StudentSideBar/StudentSideBar";
 import Dashboard from "../../Components/Dashboard/Dashboard";
 import "./studentdashboard.css";
 

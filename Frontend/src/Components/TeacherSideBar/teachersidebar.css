@@ -1,0 +1,68 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4rem;
+  width: clamp(15rem, 18%, 20rem);
+  height: 100vh;
+  background-color: #ffffff;
+  color: #1f2128;
+  padding: 1rem;
+  padding-top: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-list {
+  width: 100%;
+  background-color: white;
+}
+
+.section-list ul {
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.section-list ul li {
+  background-color: #ffffff;
+  padding: 0.625rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.section-list ul li a {
+  text-decoration: none;
+  background-color: #ffffff;
+}
+.section-list ul li a:hover {
+  color: #1db19f;
+}
+.section-list ul li a:active {
+  color: #1db19f;
+}
+
+.eduverse-logo {
+  background-color: #ffffff;
+  max-width: 100%;
+  height: auto;
+}
+
+.eduverse-logo img {
+  background-color: #ffffff;
+}
+
+.li {
+  text-decoration: none;
+}
+.active {
+  color: #1db19f;
+  font-weight: bold;
+}

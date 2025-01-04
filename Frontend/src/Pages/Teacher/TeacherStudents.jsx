@@ -1,8 +1,8 @@
 import React from "react";
-import "./teacherdashboard.css";
+import "./teacherstudents.css";
 import TeacherSideBar from "../../Components/TeacherSideBar/TeacherSideBar";
 
-export default function TeacherDashboard() {
+export default function TeacherStudents() {
   return (
     <div>
       <TeacherSideBar />
