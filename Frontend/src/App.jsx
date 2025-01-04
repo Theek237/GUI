@@ -13,6 +13,11 @@ import StudentDashboard from "./Pages/Student/StudentDashboard";
 import TeacherDashboard from "./Pages/Teacher/TeacherDashboard";
 import Student from "./Pages/Student/Student";
 import Teacher from "./Pages/Teacher/Teacher";
+import StudentCourses from "./Pages/Student/StudentCourses";
+import StudentAllCourses from "./Pages/Student/StudentAllCourses";
+import StudentAssignments from "./Pages/Student/StudentAssignments";
+import StudentMessages from "./Pages/Student/StudentMessages";
+import StudentSettings from "./Pages/Student/StudentSettings";
 
 function App() {
   return (
@@ -33,6 +38,11 @@ function App() {
           <Route path="/student" element={<Student />}>
             <Route index element={<StudentDashboard />}></Route>
             <Route path="dashboard" element={<StudentDashboard />}></Route>
+            <Route path="mycourses" element={<StudentCourses />}></Route>
+            <Route path="allcourses" element={<StudentAllCourses />}></Route>
+            <Route path="assignments" element={<StudentAssignments />}></Route>
+            <Route path="messages" element={<StudentMessages />}></Route>
+            <Route path="settings" element={<StudentSettings />}></Route>
           </Route>
 
           {/* Teacher Routes */}

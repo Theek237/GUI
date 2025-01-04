@@ -1,6 +1,7 @@
 import React from "react";
 import EduVerseLogo from "../../assets/EduVerse.png";
 import "./sidebar.css";
+import { Link, NavLink } from "react-router-dom";
 
 export default function SideBar() {
   return (
@@ -12,12 +13,25 @@ export default function SideBar() {
 
         <div className="section-list">
           <ul>
-            <li>Dashboard</li>
-            <li>My Courses</li>
-            <li>All Courses</li>
-            <li>Assignments</li>
-            <li>Messages</li>
-            <li>Settings</li>
+            <li>
+              <NavLink to={"/student/dashboard"}>Dashboard</NavLink>
+            </li>
+
+            <li>
+              <NavLink to={"/student/mycourses"}>My Courses</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/student/allcourses"}>All Courses</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/student/assignments"}>Assignments</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/student/messages"}>Messages</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/student/settings"}>Settings</NavLink>
+            </li>
           </ul>
         </div>
       </div>

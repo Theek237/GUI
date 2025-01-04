@@ -7,7 +7,7 @@ export default function NavItem({ text, url }) {
     <div className="navItem-container">
       <NavLink
         to={url}
-        className={({ isActive }) => (isActive ? "active" : "")} // Add active class conditionally
+        className={({ isActive }) => (isActive ? "active" : "")}
       >
         {text}
       </NavLink>
