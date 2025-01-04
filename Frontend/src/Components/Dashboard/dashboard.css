@@ -1,0 +1,9 @@
+.dashboard-container {
+  border-radius: 1.1875rem;
+  background: #e9eff6;
+  border: 2px solid #383f48;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-around;
+}

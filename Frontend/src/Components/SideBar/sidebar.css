@@ -1,0 +1,62 @@
+/* Main sidebar container */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Reduced gap to be more reasonable - converted to rem for consistency */
+  gap: 2rem;
+  /* Using min-width and max-width for better responsiveness */
+  width: clamp(15rem, 18%, 20rem);
+  height: 100vh;
+  background-color: #ffffff;
+  color: #1f2128;
+  padding: 1rem;
+  /* Added box shadow for depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section list styling */
+.section-list {
+  width: 100%;
+  background-color: white;
+}
+
+.section-list ul {
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  /* Made width 100% instead of fixed width for better responsiveness */
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  /* Converted px to rem for consistency */
+  gap: 1.5rem;
+  /* Reset default padding */
+  padding: 0;
+  margin: 0;
+}
+
+.section-list ul li {
+  background-color: #ffffff;
+  padding: 0.625rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  /* Added hover state for better interactivity */
+  transition: background-color 0.2s ease;
+}
+
+/* Added hover effect for list items */
+.section-list ul li:hover {
+  background-color: #f5f5f5;
+}
+
+.eduverse-logo {
+  background-color: #ffffff; /* Set explicitly to white */
+  max-width: 100%;
+  height: auto;
+}
+
+.eduverse-logo img {
+  background-color: #ffffff; /* Set explicitly to white */
+}

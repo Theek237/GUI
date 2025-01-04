@@ -18,6 +18,16 @@ export default function About() {
       .catch((err) => console.error("API Error:", err));
   }, []);
 
+  function deleteStudent(delID) {
+    axios
+      .delete(`http://localhost:3001/api/student/${delID}`)
+      .then((res) => {
+        alert("Student Deleted Sucessfully");
+        SetData(data.filter((item) => item.StudentID !== delID));
+      })
+      .catch((err) => console.error("Error deleting student:", err));
+  }
+
   return (
     <>
       <Header />
@@ -55,23 +65,7 @@ export default function About() {
 
                       <button
                         className="delete-btn"
-                        onClick={() => {
-                          axios
-                            .delete(
-                              `http://localhost:3001/api/student/${student.StudentID}`
-                            )
-                            .then(() => {
-                              alert("Student Deleted Successfully");
-                              SetData(
-                                data.filter(
-                                  (item) => item.StudentID !== student.StudentID
-                                )
-                              );
-                            })
-                            .catch((err) =>
-                              console.error("Error deleting student:", err)
-                            );
-                        }}
+                        onClick={() => deleteStudent(student.StudentID)}
                       >
                         Delete
                       </button>
