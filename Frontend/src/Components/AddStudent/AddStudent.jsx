@@ -27,7 +27,7 @@ export default function AddStudent() {
       .post("http://localhost:3001/api/student", values)
       .then((res) => {
         console.log(res);
-        navigate("/about");
+        navigate("/teacher/students");
       })
       .catch((err) => {
         console.log(err);

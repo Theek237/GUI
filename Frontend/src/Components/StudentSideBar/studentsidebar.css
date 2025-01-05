@@ -4,13 +4,13 @@
   align-items: center;
 
   gap: 4rem;
-  width: clamp(15rem, 18%, 20rem);
+  width: 18rem;
   height: 100vh;
   background-color: #ffffff;
   color: #1f2128;
   padding: 1rem;
   padding-top: 3rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .section-list {
@@ -36,7 +36,7 @@
   width: 100%;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  /* transition: background-color 0.2s ease; */
 }
 .section-list ul li a {
   text-decoration: none;
