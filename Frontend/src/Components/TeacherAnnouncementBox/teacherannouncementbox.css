@@ -1,10 +1,9 @@
 .tawhitebox {
   background-color: white;
-  padding: 1.5rem;
+  padding: 1.4rem;
   margin: 1rem 2rem;
-
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 1.4375rem;
+  border: 2px solid #1db19f;
+  border-radius: 1.3rem;
 }
 .taheader {
   display: flex;
@@ -75,4 +74,16 @@
   padding: 0.5rem;
   background-color: white;
   padding-top: 0;
+}
+button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.delete-btn {
+  background-color: #ff4136; /* Red */
+  color: white;
 }

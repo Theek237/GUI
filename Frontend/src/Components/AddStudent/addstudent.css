@@ -1,38 +1,44 @@
-.add-student-form h1 {
-  color: var(--Darker, #1f2128);
-  font-family: Inter;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 2.5rem;
-  margin-top: 2rem;
-}
-.add-student-form {
+.add-student-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  /* min-height: 100vh; */
+  /* background-color: #f9f9f9; */
+  /* padding: 2rem; */
 }
-.add-student-form button {
-  border: none;
-  width: 10.75rem;
-  height: 2.9375rem;
-  flex-shrink: 0;
 
-  border-radius: 0.5625rem;
-  background: #1db19f;
-  color: #fff;
+.add-student-form {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  margin-bottom: 1.5rem;
   text-align: center;
-  font-family: Inter;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  cursor: pointer;
+  color: #1f2128;
+  background-color: white;
 }
 
 .error-message {
+  margin-bottom: 1rem;
   color: red;
   font-size: 14px;
-  margin-bottom: 10px;
+  text-align: center;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5625rem;
+  background: #1db19f;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 }

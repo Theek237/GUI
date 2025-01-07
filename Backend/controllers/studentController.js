@@ -13,7 +13,12 @@ export const getAllStudents = (req, res) => {
 export const createStudent = (req, res) => {
   const sql =
     "INSERT INTO student (StudentID, StudentName, StudentEmail, StudentMobileNo) VALUES (?)";
-  const values = [req.body.id, req.body.name, req.body.email, req.body.mobile];
+  const values = [
+    req.body.studentId,
+    req.body.studentName,
+    req.body.studentEmail,
+    req.body.studentMobileNo,
+  ];
   db.query(sql, [values], (err, result) => {
     if (err) return res.status(500).json(err);
     res.status(201).json(result);

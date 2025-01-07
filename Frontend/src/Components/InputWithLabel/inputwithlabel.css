@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: white;
 }
 .inputwithlabel-container label {
   color: var(--Darker, #1f2128);
+  background-color: white;
   font-family: Inter;
   font-size: 1rem;
   font-style: normal;
@@ -14,13 +16,13 @@
 }
 
 .inputwithlabel-container input {
-  width: 46.6875rem;
+  width: 100%;
   height: 3rem;
   flex-shrink: 0;
-
+  border: 1px solid #1db19f;
   border-radius: 0.4375rem;
   background: #fff;
-  border: none;
+
   margin-bottom: 1.94rem;
   padding-left: 1rem;
 }

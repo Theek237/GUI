@@ -2,23 +2,26 @@ import React, { useState } from "react";
 import "./addstudent.css";
 import axios from "axios";
 import InputWithLabel from "../InputWithLabel/InputWithLabel";
-import { useNavigate } from "react-router-dom";
+import "./modalstyles.css";
 
-export default function AddStudent() {
+export default function AddStudent({ onSuccess }) {
   const [values, setValues] = useState({
-    name: "",
-    email: "",
-    id: "",
-    mobile: "",
+    studentID: "",
+    studentName: "",
+    studentEmail: "",
+    studentMobileNo: "",
   });
 
   const [error, setError] = useState("");
 
-  const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!values.id || !values.name || !values.email || !values.mobile) {
+    if (
+      !values.studentID ||
+      !values.studentName ||
+      !values.studentEmail ||
+      !values.studentMobileNo
+    ) {
       setError("All fields are required!");
       return;
     }
@@ -27,7 +30,7 @@ export default function AddStudent() {
       .post("http://localhost:3001/api/student", values)
       .then((res) => {
         console.log(res);
-        navigate("/teacher/students");
+        onSuccess();
       })
       .catch((err) => {
         console.log(err);
@@ -36,45 +39,47 @@ export default function AddStudent() {
   };
 
   return (
-    <>
-      <div className="add-student-container">
-        <form className="add-student-form" onSubmit={handleSubmit}>
-          <h1>Add Student</h1>
+    <div className="add-student-container">
+      <form className="add-student-form" onSubmit={handleSubmit}>
+        <h1 className="form-title">Add Student</h1>
 
-          {error && <p className="error-message">{error}</p>}
+        {error && <p className="error-message">{error}</p>}
 
-          <InputWithLabel
-            type="text"
-            value={values.id}
-            // placeholder="Enter Student ID"
-            label="Student ID:"
-            onChange={(e) => setValues({ ...values, id: e.target.value })}
-          />
-          <InputWithLabel
-            type="text"
-            value={values.name}
-            // placeholder="Enter Student Name"
-            label="Name:"
-            onChange={(e) => setValues({ ...values, name: e.target.value })}
-          />
-          <InputWithLabel
-            type="text"
-            value={values.email}
-            // placeholder="Enter Student Email"
-            label="Email:"
-            onChange={(e) => setValues({ ...values, email: e.target.value })}
-          />
-          <InputWithLabel
-            type="text"
-            value={values.mobile}
-            // placeholder="Enter Student Mobile Number"
-            label="Mobile:"
-            onChange={(e) => setValues({ ...values, mobile: e.target.value })}
-          />
+        <InputWithLabel
+          type="text"
+          label="Student ID:"
+          value={values.studentID}
+          onChange={(e) => setValues({ ...values, studentID: e.target.value })}
+        />
+        <InputWithLabel
+          type="text"
+          label="Name:"
+          value={values.studentName}
+          onChange={(e) =>
+            setValues({ ...values, studentName: e.target.value })
+          }
+        />
+        <InputWithLabel
+          type="text"
+          label="Email:"
+          value={values.studentEmail}
+          onChange={(e) =>
+            setValues({ ...values, studentEmail: e.target.value })
+          }
+        />
+        <InputWithLabel
+          type="text"
+          label="Mobile:"
+          value={values.studentMobileNo}
+          onChange={(e) =>
+            setValues({ ...values, studentMobileNo: e.target.value })
+          }
+        />
 
-          <button>Submit</button>
-        </form>
-      </div>
-    </>
+        <button type="submit" className="submit-btn">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }

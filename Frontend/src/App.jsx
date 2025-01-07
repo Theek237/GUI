@@ -16,10 +16,10 @@ import Teacher from "./Pages/Teacher/Teacher";
 import StudentCourses from "./Pages/Student/StudentCourses";
 import StudentAllCourses from "./Pages/Student/StudentAllCourses";
 import StudentAssignments from "./Pages/Student/StudentAssignments";
-import StudentAnnounsments from "./Pages/Student/StudentAnnounsments";
+import StudentAnnouncements from "./Pages/Student/StudentAnnounsments";
 import StudentSettings from "./Pages/Student/StudentSettings";
 import TeacherCourses from "./Pages/Teacher/TeacherCourses";
-import TeacherAnnounsments from "./Pages/Teacher/TeacherAnnounsments";
+import TeacherAnnouncements from "./Pages/Teacher/TeacherAnnounsments";
 import TeacherStudents from "./Pages/Teacher/TeacherStudents";
 import TeacherSettings from "./Pages/Teacher/TeacherSettings";
 import TeacherAssignments from "./Pages/Teacher/TeacherAssignments";
@@ -47,8 +47,8 @@ function App() {
             <Route path="allcourses" element={<StudentAllCourses />}></Route>
             <Route path="assignments" element={<StudentAssignments />}></Route>
             <Route
-              path="announsments"
-              element={<StudentAnnounsments />}
+              path="announcements"
+              element={<StudentAnnouncements />}
             ></Route>
             <Route path="settings" element={<StudentSettings />}></Route>
           </Route>
@@ -59,8 +59,8 @@ function App() {
             <Route path="dashboard" element={<TeacherDashboard />}></Route>
             <Route path="courses" element={<TeacherCourses />}></Route>
             <Route
-              path="announsments"
-              element={<TeacherAnnounsments />}
+              path="announcements"
+              element={<TeacherAnnouncements />}
             ></Route>
             <Route path="assignments" element={<TeacherAssignments />}></Route>
             <Route path="students" element={<TeacherStudents />}></Route>
