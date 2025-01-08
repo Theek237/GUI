@@ -1,0 +1,49 @@
+.whitebox {
+  border: 2px solid #1db19f;
+  display: flex;
+  flex-direction: column;
+}
+
+.whitebox {
+  border-radius: 1.5625rem;
+
+  background: #fff;
+  width: 13.25rem;
+  height: 17.625rem;
+  flex-shrink: 0;
+}
+
+.whitebox h2 {
+  color: #1db19f;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: white;
+  margin-top: 1.3rem;
+}
+
+.whitebox h3 {
+  color: #1f2128;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: white;
+}
+.courcecard-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.btns {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}

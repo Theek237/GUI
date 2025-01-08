@@ -14,7 +14,7 @@ import TeacherDashboard from "./Pages/Teacher/TeacherDashboard";
 import Student from "./Pages/Student/Student";
 import Teacher from "./Pages/Teacher/Teacher";
 import StudentCourses from "./Pages/Student/StudentCourses";
-import StudentAllCourses from "./Pages/Student/StudentAllCourses";
+import StudentAllcourses from "./Pages/Student/StudentAllcourses";
 import StudentAssignments from "./Pages/Student/StudentAssignments";
 import StudentSettings from "./Pages/Student/StudentSettings";
 import TeacherCourses from "./Pages/Teacher/TeacherCourses";
@@ -44,7 +44,7 @@ function App() {
             <Route index element={<StudentDashboard />}></Route>
             <Route path="dashboard" element={<StudentDashboard />}></Route>
             <Route path="mycourses" element={<StudentCourses />}></Route>
-            <Route path="allcourses" element={<StudentAllCourses />}></Route>
+            <Route path="allcourses" element={<StudentAllcourses />}></Route>
             <Route path="assignments" element={<StudentAssignments />}></Route>
             <Route
               path="announcements"
