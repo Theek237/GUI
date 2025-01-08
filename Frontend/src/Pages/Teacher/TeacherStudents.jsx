@@ -3,11 +3,17 @@ import "./teacherstudents.css";
 import axios from "axios";
 import TeacherSideBar from "../../Components/TeacherSideBar/TeacherSideBar";
 import { Link } from "react-router-dom";
+import AddStudent from "../../Components/AddStudent/AddStudent";
 
 export default function TeacherStudents() {
   const [data, SetData] = useState([]);
+  const [showCreateModal, setShowCreateModal] = useState(false);
 
   useEffect(() => {
+    fetchStudents();
+  }, []);
+
+  function fetchStudents() {
     axios
       .get("http://localhost:3001/api/student")
       .then((res) => {
@@ -15,7 +21,12 @@ export default function TeacherStudents() {
         SetData(res.data);
       })
       .catch((err) => console.error("API Error:", err));
-  }, []);
+  }
+
+  function handleStudentAdded() {
+    setShowCreateModal(false);
+    fetchStudents();
+  }
 
   function deleteStudent(delID) {
     axios
@@ -31,9 +42,11 @@ export default function TeacherStudents() {
       <TeacherSideBar />
       <div className="crud">
         <h1>Manage Students</h1>
-        <Link to={"/studentcreate"}>
-          <div className="create-btn">Create</div>
-        </Link>
+
+        <button className="create-btn" onClick={() => setShowCreateModal(true)}>
+          Create
+        </button>
+
         <div className="table">
           <table>
             <thead>
@@ -81,6 +94,22 @@ export default function TeacherStudents() {
           </table>
         </div>
       </div>
+
+      {/* Conditionally render the "Create Modal" */}
+      {showCreateModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <button
+              className="close-btn"
+              onClick={() => setShowCreateModal(false)}
+            >
+              ✕
+            </button>
+            {/* Render the AddStudent form here */}
+            <AddStudent onSuccess={handleStudentAdded} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

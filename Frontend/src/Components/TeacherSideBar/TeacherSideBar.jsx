@@ -24,7 +24,7 @@ export default function TeacherSideBar() {
               <NavLink to={"/teacher/assignments"}>Assignments</NavLink>
             </li>
             <li>
-              <NavLink to={"/teacher/announsments"}>Announsments</NavLink>
+              <NavLink to={"/teacher/announcements"}>Announcements</NavLink>
             </li>
             <li>
               <NavLink to={"/teacher/students"}>Stundets</NavLink>

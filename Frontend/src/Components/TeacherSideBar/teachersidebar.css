@@ -4,9 +4,9 @@
   align-items: center;
 
   gap: 4rem;
-  width: 18rem; /* Fixed width */
-  min-width: 18rem; /* Prevents shrinking */
-  max-width: 18rem; /* Prevents expanding */
+  width: 16rem; /* Fixed width */
+  min-width: 16rem; /* Prevents shrinking */
+  max-width: 16rem; /* Prevents expanding */
   height: 100vh;
   background-color: #ffffff;
   color: #1f2128;

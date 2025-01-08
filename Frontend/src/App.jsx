@@ -16,13 +16,13 @@ import Teacher from "./Pages/Teacher/Teacher";
 import StudentCourses from "./Pages/Student/StudentCourses";
 import StudentAllCourses from "./Pages/Student/StudentAllCourses";
 import StudentAssignments from "./Pages/Student/StudentAssignments";
-import StudentAnnouncements from "./Pages/Student/StudentAnnounsments";
 import StudentSettings from "./Pages/Student/StudentSettings";
 import TeacherCourses from "./Pages/Teacher/TeacherCourses";
-import TeacherAnnouncements from "./Pages/Teacher/TeacherAnnounsments";
 import TeacherStudents from "./Pages/Teacher/TeacherStudents";
 import TeacherSettings from "./Pages/Teacher/TeacherSettings";
 import TeacherAssignments from "./Pages/Teacher/TeacherAssignments";
+import TeacherAnnouncements from "./Pages/Teacher/TeacherAnnouncements";
+import StudentAnnouncements from "./Pages/Student/StudentAnnouncements";
 
 function App() {
   return (
