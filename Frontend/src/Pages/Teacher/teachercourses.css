@@ -1,14 +1,5 @@
-.teachercources-container {
+.teachercourses-container {
   display: flex;
-}
-
-.whitebox {
-  border-radius: 1.5625rem;
-  border: 1px solid rgba(233, 239, 246, 0.15);
-  background: #fff;
-  width: 13.25rem;
-  height: 15.625rem;
-  flex-shrink: 0;
 }
 
 .greenbox {
