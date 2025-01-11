@@ -1,4 +1,4 @@
-.choose-text {
+/* .choose-text {
   margin-top: 5rem;
   text-align: center;
   color: var(--secondary-text-color);
@@ -43,6 +43,80 @@
 .teacherbtn h2,
 .studentbtn h2 {
   color: var(--Darker, #1f2128);
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.choose-text {
+  margin-top: 5rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.135rem;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.choose-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.4375rem;
+  margin-top: 4rem;
+}
+
+.choose-box {
+  width: 10.9375rem;
+  height: 10.9375rem;
+  border-radius: 2.3125rem;
+  background: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choose-box img {
+  background: none;
+  width: 7.4375rem;
+  height: 7.4375rem;
+  transition: transform 0.3s ease;
+}
+
+.choose-box:hover img {
+  transform: scale(1.1);
+}
+
+.teacherbtn,
+.studentbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.19rem;
+}
+
+.teacherbtn h2,
+.studentbtn h2 {
+  color: var(--secondary-text-color);
   font-family: Inter;
   font-size: 1.25rem;
   font-style: normal;

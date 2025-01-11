@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import InputBox from "../../Components/InputBox/InputBox";
 import Footer from "../../Components/Footer/Footer";
 import "./studentsignin.css";
+import loginimg from "../../assets/login.svg";
 
 export default function StudentSignIn() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -15,7 +16,7 @@ export default function StudentSignIn() {
       <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
       <div className="signin-container">
         <div className="signin-leftside">
-          <img src="src\assets\login.png" alt="loginimg" />
+          <img src={loginimg} alt="loginimg" />
         </div>
         <div className="signin-rightside">
           <div className="signin-title">
@@ -36,8 +37,9 @@ export default function StudentSignIn() {
               src="src/assets/password.png"
             />
           </div>
-
-          <button className="signin-btn">Sign In</button>
+          <Link to="/student">
+            <button className="signin-btn">Sign In</button>
+          </Link>
           <p className="linktosignup">
             Don’t Have an Account?{" "}
             <span>

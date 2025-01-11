@@ -1,4 +1,4 @@
-.signin-container {
+/* .signin-container {
   display: flex;
   justify-content: center;
   margin-top: 4.5rem;
@@ -80,4 +80,233 @@
 
 .linktosignup span a {
   color: var(--primary-text-color);
+} */
+
+.signin-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+  gap: 9rem;
+  /* Same fade-in animation as signup page */
+  animation: fadeIn 0.8s ease-in;
+}
+
+.signin-rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Similar slide-in animation as signup page */
+  animation: slideInRight 1s ease-out;
+}
+
+.signin-title h1,
+.signin-title span {
+  text-align: center;
+  color: var(--secondary-text-color);
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.135rem;
+  /* Same scale animation as signup page */
+  animation: scaleIn 0.8s ease-out;
+}
+.signin-title span {
+  color: var(--primary-text-color);
+}
+.signin-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.44rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3.25rem;
+}
+
+.signin-input input {
+  /* Same focus animation as signup page */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signin-input input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(var(--primary-text-color), 0.2);
+}
+
+.signin-btn {
+  width: 27.875rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: var(--primary-text-color);
+  border: none;
+  color: #e9eff6;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* Same button hover animation as signup page */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin-btn:active {
+  transform: translateY(0);
+}
+
+.linktosignup span a {
+  color: var(--primary-text-color);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: none;
+}
+
+.linktosignup span a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.signin-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+  gap: 9rem;
+  /* Same fade-in animation as signup-container */
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Adding leftside animation to match signup page */
+.signin-leftside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Same slide-in animation as signup-leftside */
+  animation: slideInLeft 1s ease-out;
+}
+
+.signin-rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Same slide-in animation as signup-rightside */
+  animation: slideInRight 1s ease-out;
+}
+
+.signin-title h1,
+.signin-title span {
+  /* Add a subtle scale animation */
+  animation: scaleIn 0.8s ease-out;
+}
+
+.signin-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.44rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3.25rem;
+}
+
+.signin-input input {
+  /* Add focus animation */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signin-input input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(var(--primary-text-color), 0.2);
+}
+
+.signin-btn {
+  width: 27.875rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: var(--primary-text-color);
+  border: none;
+  color: #e9eff6;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* Add hover animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin-btn:active {
+  transform: translateY(0);
+}
+
+.linktosignup {
+  margin-top: 1.44rem;
+  color: var(--secondary-text-color);
+  opacity: 80%;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.linktosignup span a {
+  color: var(--primary-text-color);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: none;
+}
+
+.linktosignup span a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+/* Define the animations (keeping the same as signup page) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

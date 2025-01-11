@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import InputBox from "../../Components/InputBox/InputBox";
 import Footer from "../../Components/Footer/Footer";
 import "./studentsignup.css";
+import signupimg from "../../assets/signup.svg";
 
 export default function StudentSignUp(props) {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -21,7 +22,7 @@ export default function StudentSignUp(props) {
             </h1>
             <h2>Enter Your Details to Create an account</h2>
           </div>
-          <img src="src\assets\signup.png" alt="signupimg" />
+          <img src={signupimg} alt="signupimg" />
         </div>
 
         <div className="signup-rightside">
@@ -53,8 +54,9 @@ export default function StudentSignUp(props) {
               src="src/assets/mobile.png"
             />
           </div>
-
-          <button className="signup-btn">Sign Up</button>
+          <Link to="/student">
+            <button className="signup-btn">Sign Up</button>
+          </Link>
           <p className="linktosignin">
             Already Have an Account?
             <span>

@@ -6,6 +6,183 @@
   box-sizing: border-box;
 }
 
+/* Refined hero section animation */
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+  animation: smoothFadeIn 0.8s ease-out;
+}
+
+.leftSide {
+  margin-left: 148px;
+  margin-top: 10rem;
+  animation: subtleSlideIn 0.9s ease-out;
+}
+
+.leftside h1 {
+  color: var(--secondary-text-color);
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.5rem;
+  animation: smoothScale 0.7s ease-out;
+}
+
+.leftSide h1 span {
+  background: linear-gradient(
+    90deg,
+    var(--primary-text-color) 0%,
+    #00cdb4 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.2rem;
+  /* Subtle gradient animation */
+  animation: subtleGradient 12s infinite linear;
+}
+
+.welcome {
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: -0.08rem;
+  animation: smoothRise 0.7s ease-out 0.1s backwards;
+}
+
+.leftSide p {
+  color: var(--secondary-text-color);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 3rem;
+  animation: smoothRise 0.7s ease-out 0.2s backwards;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  animation: smoothRise 0.7s ease-out 0.3s backwards;
+}
+
+.buttons button {
+  transition: all 0.25s ease-out;
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.buttons button:active {
+  transform: translateY(0);
+}
+
+.rightSide {
+  margin-right: 130px;
+  margin-top: 110px;
+  animation: subtleSlideInRight 0.9s ease-out;
+}
+
+.rightSide img {
+  width: 450px;
+  transition: transform 0.4s ease-out;
+}
+
+.rightSide img:hover {
+  transform: scale(1.01); /* Reduced scale effect */
+}
+
+/* Refined, professional animations */
+@keyframes smoothFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes subtleSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes subtleSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes smoothScale {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes smoothRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtleGradient {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(10deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* Add smooth page transition */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* * {
+  background-color: var(--background-color-three);
+  color: var(--secondary-text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .leftSide {
   margin-left: 148px;
   margin-top: 10rem;
@@ -72,4 +249,4 @@
 .rightSide {
   margin-right: 130px;
   margin-top: 110px;
-}
+} */

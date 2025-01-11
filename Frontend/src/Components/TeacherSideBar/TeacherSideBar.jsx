@@ -1,5 +1,5 @@
 import React from "react";
-import EduVerseLogo from "../../assets/EduVerse.png";
+import EduVerseLogo from "../../assets/EduVerse.svg";
 import "./teachersidebar.css";
 import { Link, NavLink } from "react-router-dom";
 

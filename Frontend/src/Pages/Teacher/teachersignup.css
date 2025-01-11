@@ -1,4 +1,4 @@
-.signup-container {
+/* .signup-container {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -11,10 +11,9 @@
   align-items: center;
 }
 .signup-title {
-  text-align: center; /* Ensure all child elements are centered */
-  display: flex;
+  text-align: center; 
   flex-direction: column;
-  align-items: center; /* Center child elements horizontally */
+  align-items: center; 
 }
 
 .signup-title h1 {
@@ -89,4 +88,131 @@
 
 .linktosignin span a {
   color: var(--primary-text-color);
+} 
+ */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 9rem;
+  /* Add a fade-in animation for the entire container */
+  animation: fadeIn 0.8s ease-in;
+}
+
+.signup-leftside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add a slide-in animation from left */
+  animation: slideInLeft 1s ease-out;
+}
+
+.signup-rightside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add a slide-in animation from right */
+  animation: slideInRight 1s ease-out;
+}
+
+.signup-btn {
+  width: 27.875rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: var(--primary-text-color);
+  border: none;
+  color: #e9eff6;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* Add hover animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-btn:active {
+  transform: translateY(0);
+}
+
+.signup-title h1,
+.signup-title span {
+  /* Add a subtle scale animation */
+  animation: scaleIn 0.8s ease-out;
+}
+
+.signup-input input {
+  /* Add focus animation */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signup-input input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(var(--primary-text-color), 0.2);
+}
+
+/* Define the animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Add a subtle link animation */
+.linktosignin span a {
+  color: var(--primary-text-color);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: none;
+}
+
+.linktosignin span a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.linktosignin {
+  display: flex;
+  gap: 3px;
 }
