@@ -1,10 +1,10 @@
 .btn2 {
   width: 170px;
   height: 40px;
-  border: 2px solid #1db19f;
+  border: 2px solid var(--primary-text-color);
   border-radius: 10px;
   background-color: transparent;
-  color: #1f2128;
+  color: var(--secondary-text-color);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;

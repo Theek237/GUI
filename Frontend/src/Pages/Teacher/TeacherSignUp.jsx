@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import Header from "../../Components/Header/Header";
 import { Link } from "react-router-dom";
 import InputBox from "../../Components/InputBox/InputBox";
@@ -6,9 +8,11 @@ import Footer from "../../Components/Footer/Footer";
 import "./teachersignup.css";
 
 export default function TeacherSignUp(props) {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <>
-      <Header />
+    <div div data-theme={isDarkMode ? "dark" : "light"}>
+      <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
       <div className="signup-container">
         <div className="signup-leftside">
           <div className="signup-title">
@@ -60,6 +64,6 @@ export default function TeacherSignUp(props) {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

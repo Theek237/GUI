@@ -3,8 +3,8 @@
   height: 40px;
   border: none;
   border-radius: 10px;
-  background-color: #1db19f;
-  color: white;
+  background-color: var(--primary-text-color);
+  color: #e9eff6;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;

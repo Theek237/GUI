@@ -2,14 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navitem.css";
 
-export default function NavItem({ text, url }) {
+export default function NavItem(props) {
   return (
     <div className="navItem-container">
       <NavLink
-        to={url}
+        to={props.url}
         className={({ isActive }) => (isActive ? "active" : "")}
       >
-        {text}
+        {props.text}
       </NavLink>
     </div>
   );

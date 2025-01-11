@@ -6,16 +6,16 @@
 
 .navItem-container a {
   text-decoration: none;
-  color: #1f2128;
+  color: var(--secondary-text-color);
 }
 
 .navItem-container a:hover {
-  color: #1db19f;
+  color: var(--primary-text-color);
 }
 
 .navItem-container a.active {
   font-weight: bold;
   text-decoration: underline;
   text-underline-offset: 10px;
-  text-decoration-color: #1db19f;
+  text-decoration-color: var(--primary-text-color);
 }

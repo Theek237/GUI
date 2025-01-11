@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import Header from "../../Components/Header/Header";
 import { Link } from "react-router-dom";
 import InputBox from "../../Components/InputBox/InputBox";
@@ -6,9 +8,11 @@ import Footer from "../../Components/Footer/Footer";
 import "./studentsignin.css";
 
 export default function StudentSignIn() {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <>
-      <Header />
+    <div data-theme={isDarkMode ? "dark" : "light"}>
+      <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
       <div className="signin-container">
         <div className="signin-leftside">
           <img src="src\assets\login.png" alt="loginimg" />
@@ -43,6 +47,6 @@ export default function StudentSignIn() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

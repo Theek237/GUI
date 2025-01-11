@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import "./home.css";
 import ButtonOne from "../../Components/ButtonOne/ButtonOne";
 import ButtonTwo from "../../Components/ButtonTwo/ButtonTwo";
@@ -7,9 +8,11 @@ import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <>
-      <Header />
+    <div data-theme={isDarkMode ? "dark" : "light"}>
+      <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
       <div className="heroSection">
         <div className="leftSide">
           <h1 className="welcome">
@@ -30,10 +33,10 @@ export default function Home() {
           </div>
         </div>
         <div className="rightSide">
-          <img src="src\assets\HeroImage.svg" alt="HeroImage" />
+          <img src="src/assets/HeroImage.svg" alt="HeroImage" />
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -1,8 +1,9 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./ThemeContext";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import AddStudent from "./Components/AddStudent/AddStudent";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentSignUp from "./Pages/Student/StudentSignUp";
 import StudentSignIn from "./Pages/Student/StudentSignIn";
 import ChooseSignIn from "./Pages/Choose Role/ChooseSignIn";
@@ -26,7 +27,7 @@ import StudentAnnouncements from "./Pages/Student/StudentAnnouncements";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -68,7 +69,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
 

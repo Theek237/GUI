@@ -3,9 +3,9 @@
   height: 3.0625rem;
   flex-shrink: 0;
   border-radius: 0.625rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #fff;
-  color: rgba(36, 39, 49, 0.7);
+  border: 1px solid var(--secondary-text-color);
+  background: var(--background-color-two);
+  color: var(--secondary-text-color);
 
   font-size: 1.25rem;
   font-style: normal;
@@ -23,4 +23,7 @@
   left: 20px;
   transform: translateY(-50%);
   background: none;
+}
+[data-theme="dark"] .input-icon {
+  filter: invert(1);
 }

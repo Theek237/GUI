@@ -1,7 +1,7 @@
 .choose-text {
   margin-top: 5rem;
   text-align: center;
-  color: var(--Less-Dark, #242731);
+  color: var(--secondary-text-color);
 
   font-size: 3.375rem;
   font-style: normal;
@@ -21,7 +21,7 @@
   width: 10.9375rem;
   height: 10.9375rem;
   border-radius: 2.3125rem;
-  background: #1db19f;
+  background: var(--primary-text-color);
   display: flex;
   align-items: center;
   justify-content: center;

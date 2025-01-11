@@ -17,7 +17,7 @@
 .rightSideHeader {
   display: flex;
   height: 90px;
-  width: 350px;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
