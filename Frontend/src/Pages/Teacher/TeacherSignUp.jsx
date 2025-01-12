@@ -55,7 +55,7 @@ export default function TeacherSignUp(props) {
             />
           </div>
 
-          <Link to="/teacher">
+          <Link to="/teacher/dashboard">
             <button className="signup-btn">Sign Up</button>
           </Link>
           <p className="linktosignin">

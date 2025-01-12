@@ -1,22 +1,16 @@
-/* teacherstudents.css */
-
-/* Overall Container Styling */
-.teacherstudents-container {
+/* .teacherstudents-container {
   display: flex;
-  background-color: #e9eff6;
+  background-color: var(--background-color);
   min-height: 100vh;
 }
 
-/* CRUD Section Styling */
 .crud {
   flex: 1;
-
-  background-color: #e9eff6; /* White background for CRUD area */
+  background-color: var(--background-color);
   border-radius: 8px;
   margin: 2rem;
 }
 
-/* Create Button Styling */
 .create-btn {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -25,17 +19,16 @@
   font-weight: bold;
   text-align: center;
   color: white;
-  background-color: #1db19f;
+  background-color: var(--primary-text-color);
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 .create-btn:hover {
-  background-color: #17a589; /* Darker green on hover */
+  background-color: #17a589;
 }
 
-/* Table Styling */
 .table table {
   width: 100%;
   border-collapse: collapse;
@@ -44,7 +37,7 @@
 }
 
 .table th {
-  background-color: #1db19f; /* Green header */
+  background-color: var(--primary-text-color);
   color: white;
   text-align: left;
   padding: 1rem;
@@ -55,26 +48,23 @@
 .table td {
   padding: 1rem;
   font-size: 0.95rem;
-  color: #1f2128; /* Dark text */
+  color: var(--secondary-text-color);
   text-align: left;
-  border-bottom: 1px solid #ddd; /* Light border for separation */
+  border-bottom: 0.2px solid var(--primary-text-color);
 }
 
-.table tbody tr:hover {
-  background-color: #f3f4f6; /* Light grey hover effect */
-}
+
 
 .table tbody tr td[colspan] {
   text-align: center;
   font-style: italic;
-  color: #ffffff;
+  color: var(--background-color-two);
   padding: 2rem;
 }
 
-/* Action Buttons Styling */
 .action-buttons {
   display: flex;
-  gap: 0.5rem; /* Space between buttons */
+  gap: 0.5rem;
 }
 
 .action-buttons button {
@@ -86,23 +76,16 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Button Colors */
-.read-btn {
-  background-color: #1db19f;
-  color: white;
-}
-
 .edit-btn {
-  background-color: #001f3f; /* Dark blue */
+  background-color: #001f3f;
   color: white;
 }
 
 .delete-btn {
-  background-color: #ff4136; /* Red */
+  background-color: #ff4136;
   color: white;
 }
 
-/* Button Hover Effects */
 .read-btn:hover {
   background-color: #17a589;
 }
@@ -115,27 +98,198 @@
   background-color: #e6392d;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .crud {
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  .table th,
-  .table td {
-    font-size: 0.85rem;
-    padding: 0.75rem;
-  }
-
-  .action-buttons button {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.8rem;
-  }
-}
 .crud h1 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #1db19f; /* Green text color */
-  font-size: 2rem; /* Larger font size */
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  font-size: 2rem;
+} */
+.teacherstudents-container {
+  display: flex;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  /* Add fade-in animation */
+  animation: fadeIn 0.8s ease-in;
+}
+
+.crud {
+  flex: 1;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  margin: 2rem;
+  /* Add scale-in animation */
+  animation: scaleIn 0.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.create-btn {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: var(--primary-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Add button appearance animation */
+  animation: slideIn 0.5s ease-out;
+}
+
+.create-btn:hover {
+  background-color: #17a589;
+  transform: scale(1.05);
+}
+
+.create-btn:active {
+  transform: scale(0.95);
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Add table fade-in animation */
+  animation: fadeIn 0.8s ease-in;
+  transition: transform 0.3s ease;
+}
+
+.table th {
+  background-color: var(--primary-text-color);
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  /* Add header slide-in animation */
+  animation: slideDown 0.6s ease-out;
+}
+
+.table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: var(--secondary-text-color);
+  text-align: left;
+  border-bottom: 0.2px solid var(--primary-text-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Simple hover effect for table rows without animation */
+.table tbody tr {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  transform: scale(1.008);
+  background-color: rgba(23, 165, 137, 0.1);
+}
+
+.table tbody tr td[colspan] {
+  text-align: center;
+  font-style: italic;
+  color: var(--background-color-two);
+  padding: 2rem;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  /* Add buttons appearance animation */
+  animation: fadeIn 0.8s ease-in;
+}
+
+.action-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #001f3f;
+  color: white;
+  animation: slideIn 0.5s ease-out;
+}
+
+.delete-btn {
+  background-color: #ff4136;
+  color: white;
+  animation: slideIn 0.5s ease-out;
+}
+
+.read-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.read-btn:hover {
+  background-color: #17a589;
+}
+
+.edit-btn:hover {
+  background-color: #002f5c;
+}
+
+.delete-btn:hover {
+  background-color: #e6392d;
+}
+
+.crud h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  font-size: 2rem;
+  /* Add heading slide-down animation */
+  animation: slideDown 0.6s ease-out;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

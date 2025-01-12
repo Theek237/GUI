@@ -32,7 +32,7 @@ export default function StudentSideBar() {
               <NavLink to={"/student/assignments"}>Assignments</NavLink>
             </li>
             <li>
-              <NavLink to={"/student/announsments"}>Announsments</NavLink>
+              <NavLink to={"/student/announcements"}>Announcements</NavLink>
             </li>
             <li>
               <NavLink to={"/student/settings"}>Settings</NavLink>

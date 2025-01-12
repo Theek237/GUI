@@ -37,7 +37,7 @@ export default function StudentSignIn() {
               src="src/assets/password.png"
             />
           </div>
-          <Link to="/student">
+          <Link to="/student/dashboard">
             <button className="signin-btn">Sign In</button>
           </Link>
           <p className="linktosignup">

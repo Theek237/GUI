@@ -5,7 +5,7 @@
   border-radius: 1.5rem;
   background: var(--background-color-two);
   width: 13.25rem;
-  height: 20rem;
+  height: 19rem;
   flex-shrink: 0;
 }
 
@@ -17,14 +17,15 @@
 .cardcontent {
   margin-bottom: 2rem;
   border-radius: 2rem;
+  background-color: var(--background-color-two);
 }
 
 .whitebox h2 {
   color: var(--primary-text-color);
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   line-height: normal;
   background-color: var(--background-color-two);
   margin-top: 1.3rem;
@@ -35,7 +36,7 @@
   text-align: center;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
   background-color: var(--background-color-two);
 }
@@ -43,15 +44,23 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  border-radius: 1.5rem;
+  position: relative;
 }
 
 .btns {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  margin-top: 1rem;
+  position: absolute;
+
+  top: 80%;
+  left: 15%;
   background-color: var(--background-color-two);
 }
 .delete-btn {
   margin: 0.6rem 0;
+}
+.cc {
+  border-radius: 1.5rem;
 }

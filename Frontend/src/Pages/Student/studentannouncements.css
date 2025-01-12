@@ -1,0 +1,69 @@
+.studentAnnounsments-container {
+  display: flex;
+  /* background-color: aliceblue; */
+  /* Add a subtle fade-in animation when the container loads */
+  animation: fadeIn 0.8s ease-in;
+}
+
+.announcementboxes {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--background-color);
+  /* Add a slight scale animation when the announcement boxes load */
+  animation: scaleIn 0.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+/* Add a hover effect to the announcement boxes */
+.announcementboxes:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.announcementboxes * {
+  background-color: var(--background-color);
+}
+
+.announcementboxes h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  margin-top: 2rem;
+  background-color: var(--background-color);
+  /* Add a slide-in animation for the heading */
+  animation: slideDown 0.6s ease-out;
+}
+
+/* Define the animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

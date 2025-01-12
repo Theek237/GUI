@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
-import "./coursecard.css";
+import "./studentcoursecard.css";
 
-export default function CourseCard(props) {
+export default function StudentCourseCard(props) {
   const { isDarkMode } = useContext(ThemeContext);
   return (
     <div data-theme={isDarkMode ? "dark" : "light"} className="cc">
@@ -14,13 +14,7 @@ export default function CourseCard(props) {
             <h3>{props.module_name}</h3>
 
             <div className="btns ">
-              <button
-                className="delete-btn"
-                onClick={() => props.onDelete(props.module_code)}
-              >
-                Delete
-              </button>
-              <button className="edit-btn">Edit</button>
+              <button className="enroll-btn">Enroll</button>
             </div>
           </div>
         </div>

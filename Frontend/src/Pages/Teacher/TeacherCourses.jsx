@@ -7,7 +7,7 @@ import AddCourse from "../../Components/AddCourse/AddCourse";
 import axios from "axios";
 
 export default function TeacherCourses() {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [data, setData] = useState([]);

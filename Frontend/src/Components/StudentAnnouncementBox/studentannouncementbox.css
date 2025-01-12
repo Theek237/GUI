@@ -1,0 +1,56 @@
+.sawhitebox {
+  background-color: var(--background-color-two);
+  padding: 2rem;
+  margin: 1rem 2rem;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+/* Add hover effect to the whitebox */
+.sawhitebox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-text-color);
+}
+.saheader {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+  background-color: var(--background-color-two);
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
+.saheader h2 {
+  color: var(--secondary-text-color);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: var(--background-color-two);
+  transition: color 0.3s ease;
+  margin-bottom: 1rem;
+}
+/* Add subtle color change on parent hover */
+.sawhitebox:hover .saheader h2 {
+  color: var(--primary-text-color);
+}
+.sabody p {
+  color: var(--secondary-text-color);
+  opacity: 0.75;
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: var(--background-color-two);
+  transition: opacity 0.3s ease;
+}
+/* Increase opacity on hover */
+.sawhitebox:hover .sabody p {
+  opacity: 1;
+}
+.sabody {
+  padding: 0.5rem;
+  background-color: var(--background-color-two);
+  padding-top: 0;
+}

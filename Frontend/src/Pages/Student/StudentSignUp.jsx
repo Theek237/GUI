@@ -54,7 +54,7 @@ export default function StudentSignUp(props) {
               src="src/assets/mobile.png"
             />
           </div>
-          <Link to="/student">
+          <Link to="/student/dashboard">
             <button className="signup-btn">Sign Up</button>
           </Link>
           <p className="linktosignin">

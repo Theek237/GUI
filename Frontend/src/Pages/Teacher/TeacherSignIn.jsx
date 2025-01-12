@@ -37,7 +37,7 @@ export default function TeacherSignIn() {
               src="src/assets/password.png"
             />
           </div>
-          <Link to="/teacher">
+          <Link to="/teacher/dashboard">
             <button className="signin-btn">Sign In</button>
           </Link>
           <p className="linktosignup">
