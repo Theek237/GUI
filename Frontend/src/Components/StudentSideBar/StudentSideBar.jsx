@@ -1,14 +1,19 @@
 import React from "react";
-import EduVerseLogo from "../../assets/EduVerse.svg";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
+import EduverseLight from "../../assets/EduVerse.svg";
+import EduverseDark from "../../assets/EduVerse-dark.svg";
 import "./studentsidebar.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function StudentSideBar() {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const logosrc = isDarkMode ? EduverseDark : EduverseLight;
   return (
-    <>
+    <div data-theme={isDarkMode ? "dark" : "light"}>
       <div className="sidebar-container">
         <div className="eduverse-logo">
-          <img src={EduVerseLogo} alt="logo" />
+          <img src={logosrc} alt="logo" />
         </div>
 
         <div className="section-list">
@@ -32,9 +37,12 @@ export default function StudentSideBar() {
             <li>
               <NavLink to={"/student/settings"}>Settings</NavLink>
             </li>
+            <li>
+              <button onClick={toggleTheme}>Theme</button>
+            </li>
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }

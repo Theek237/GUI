@@ -1,22 +1,22 @@
-.tawhitebox {
-  background-color: white;
+/* .tawhitebox {
+  background-color: var(--background-color-two);
   padding: 1.4rem;
   margin: 1rem 2rem;
-  border: 2px solid #1db19f;
-  border-radius: 1.3rem;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 1rem;
 }
 .taheader {
   display: flex;
   justify-content: space-between;
   padding-right: 2rem;
-  background-color: white;
+  background-color: var(--background-color-two);
   padding: 0.5rem;
   padding-bottom: 0;
 }
 .taleftside {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 
 .tarightside {
@@ -24,32 +24,20 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 .tarightside img {
   cursor: pointer;
 }
-.imgone {
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
-  padding-bottom: 2rem;
-}
-.imgtwo {
-  width: 1.4rem;
-  margin-bottom: 0.05rem;
-  background-color: white;
-  padding-bottom: 2rem;
-}
 
 .taleftside h2 {
-  color: #1f2128;
+  color: var(--secondary-text-color);
   font-family: Inter;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 
 .taleftside h3 {
@@ -59,20 +47,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 .tabody p {
-  color: rgba(31, 33, 40, 0.9);
+  color: var(--secondary-text-color);
+  opacity: 0.75;
   font-family: Inter;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 .tabody {
   padding: 0.5rem;
-  background-color: white;
+  background-color: var(--background-color-two);
   padding-top: 0;
 }
 button {
@@ -84,6 +73,172 @@ button {
   transition: all 0.3s ease-in-out;
 }
 .delete-btn {
-  background-color: #ff4136; /* Red */
+  background-color: #ff4136; 
   color: white;
+}
+
+.edit-btn {
+  background-color: #0074d9; 
+  color: white;
+  margin: 0.6rem 0;
+} */
+
+/* ------------------------------------------------------------ */
+
+.tawhitebox {
+  background-color: var(--background-color-two);
+  padding: 1.4rem;
+  margin: 1rem 2rem;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  /* Add smooth transition for all properties */
+}
+
+/* Add hover effect to the whitebox */
+.tawhitebox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-text-color);
+}
+
+.taheader {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+  background-color: var(--background-color-two);
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
+
+.taleftside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color-two);
+}
+
+.tarightside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--background-color-two);
+}
+
+/* Add hover effect to images in the right side */
+.tarightside img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tarightside img:hover {
+  transform: scale(1.1);
+}
+
+.taleftside h2 {
+  color: var(--secondary-text-color);
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: var(--background-color-two);
+  transition: color 0.3s ease;
+}
+
+/* Add subtle color change on parent hover */
+.tawhitebox:hover .taleftside h2 {
+  color: var(--primary-text-color);
+}
+
+.taleftside h3 {
+  color: rgba(31, 33, 40, 0.49);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: var(--background-color-two);
+}
+
+.tabody p {
+  color: var(--secondary-text-color);
+  opacity: 0.75;
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: var(--background-color-two);
+  transition: opacity 0.3s ease;
+}
+
+/* Increase opacity on hover */
+.tawhitebox:hover .tabody p {
+  opacity: 1;
+}
+
+.tabody {
+  padding: 0.5rem;
+  background-color: var(--background-color-two);
+  padding-top: 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced button hover effects */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.delete-btn {
+  background-color: #ff4136;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+.edit-btn {
+  background-color: #0074d9;
+  color: white;
+  margin: 0.6rem 0;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Add ripple effect for buttons */
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+button:active::after {
+  width: 200%;
+  height: 200%;
 }

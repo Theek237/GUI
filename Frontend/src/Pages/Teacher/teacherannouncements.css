@@ -1,22 +1,123 @@
-.teacherAnnounsments-container {
+/* .teacherAnnounsments-container {
   display: flex;
+  background-color: aliceblue;
 }
 
 .announcement {
   display: flex;
   flex-direction: column;
   flex: 1;
+  background-color: var(--background-color);
+}
+.announcement * {
+  background-color: var(--background-color);
 }
 .announcement h1 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #1db19f; /* Green text color */
+  color: var(--primary-text-color); 
   font-size: 2rem;
   margin-top: 2rem;
+  background-color: var(--background-color);
 }
 
 .tacreatebtn {
   padding: 0;
   padding-left: 2rem;
   margin: 0;
+}
+
+.create-btn {
+  background-color: var(--primary-text-color);
+} */
+.teacherAnnounsments-container {
+  display: flex;
+  background-color: aliceblue;
+  /* Add a subtle fade-in animation when the container loads */
+  animation: fadeIn 0.8s ease-in;
+}
+
+.announcement {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--background-color);
+  /* Add a slight scale animation when the announcement loads */
+  animation: scaleIn 0.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+/* Add a hover effect to the announcement */
+.announcement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.announcement * {
+  background-color: var(--background-color);
+}
+
+.announcement h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  margin-top: 2rem;
+  background-color: var(--background-color);
+  /* Add a slide-in animation for the heading */
+  animation: slideDown 0.6s ease-out;
+}
+
+.tacreatebtn {
+  padding: 0;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.create-btn {
+  background-color: var(--primary-text-color);
+  transition: all 0.3s ease;
+  /* Add pulse animation on hover */
+  position: relative;
+  overflow: hidden;
+}
+
+.create-btn:hover {
+  transform: scale(1.05);
+}
+
+.create-btn:active {
+  transform: scale(0.95);
+}
+
+/* Define the animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

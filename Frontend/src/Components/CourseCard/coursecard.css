@@ -1,39 +1,43 @@
 .whitebox {
-  border: 2px solid #1db19f;
+  border: 2px solid var(--primary-text-color);
   display: flex;
   flex-direction: column;
-}
-
-.whitebox {
-  border-radius: 1.5625rem;
-
-  background: #fff;
+  border-radius: 1.5rem;
+  background: var(--background-color-two);
   width: 13.25rem;
-  height: 17.625rem;
+  height: 20rem;
   flex-shrink: 0;
 }
 
+.greenbox {
+  border-top-left-radius: 1.35rem;
+  border-top-right-radius: 1.35rem;
+  width: 13.1rem;
+}
+.cardcontent {
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
+
 .whitebox h2 {
-  color: #1db19f;
+  color: var(--primary-text-color);
   text-align: center;
-  font-family: Inter;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-color: white;
+  background-color: var(--background-color-two);
   margin-top: 1.3rem;
 }
 
 .whitebox h3 {
-  color: #1f2128;
+  color: var(--secondary-text-color);
   text-align: center;
-  font-family: Inter;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 .courcecard-container {
   display: flex;
@@ -46,5 +50,8 @@
   gap: 0.5rem;
   justify-content: center;
   margin-top: 1rem;
-  background-color: white;
+  background-color: var(--background-color-two);
+}
+.delete-btn {
+  margin: 0.6rem 0;
 }

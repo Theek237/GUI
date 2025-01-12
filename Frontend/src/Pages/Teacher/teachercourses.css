@@ -1,5 +1,6 @@
 .teachercourses-container {
   display: flex;
+  
 }
 
 .greenbox {
@@ -8,11 +9,16 @@
   flex-shrink: 0;
 
   border-radius: 1rem 1rem 0rem 0rem;
-  background: #1db19f;
+  background: var(--primary-text-color);
 }
 
 .teachercourses {
   flex: 1;
+  background-color: var(--background-color);
+}
+
+.teachercourses >*{
+  background-color: var(--background-color);
 }
 .allcards {
   display: flex;
@@ -24,7 +30,7 @@
 .teachercourses h1 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #1db19f; /* Green text color */
+  color: var(--primary-text-color);
   font-size: 2rem;
   margin-top: 2rem;
 }

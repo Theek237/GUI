@@ -1,18 +1,116 @@
+/* Sidebar Container */
 .sidebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 16rem;
+  min-width: 16rem;
+  max-width: 16rem;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--background-color-two);
+  color: var(--primary-text-color);
+  padding: 1rem;
+  padding-top: 3rem;
+  /* Fade-in animation for a smoother entry */
+  /* animation: fadeIn 0.5s ease-in forwards; */
+}
+
+/* Logo Container */
+.eduverse-logo {
+  background-color: var(--background-color-two);
+  max-width: 100%;
+  height: auto;
+}
+
+.eduverse-logo img {
+  background-color: var(--background-color-two);
+}
+
+/* Navigation Section */
+.section-list {
+  width: 100%;
+  background-color: var(--background-color-two);
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.section-list ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color-two);
+}
+
+.section-list ul li {
+  width: 100%;
+  padding: 0.625rem;
+  text-align: center;
+  cursor: pointer;
+  /* transition: background-color 0.2s ease, color 0.2s ease; */
+  background-color: var(--background-color-two);
+}
+
+.section-list ul li a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  display: block;
+  background-color: var(--background-color-two);
+  transition: color 0.2s ease;
+}
+
+/* Hover State */
+
+.section-list ul li a:hover {
+  color: var(--primary-text-color);
+}
+
+/* Active Link */
+.active {
+  color: var(--primary-text-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--primary-text-color);
+}
+
+/* Fade-in Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .sidebar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   gap: 4rem;
-  width: 16rem; /* Fixed width */
-  min-width: 16rem; /* Prevents shrinking */
-  max-width: 16rem; /* Prevents expanding */
+  width: 16rem;
+  min-width: 16rem; 
+  max-width: 16rem; 
   height: 100vh;
   background-color: #ffffff;
   color: #1f2128;
   padding: 1rem;
   padding-top: 3rem;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .section-list {
@@ -38,7 +136,6 @@
   width: 100%;
   text-align: center;
   cursor: pointer;
-  /* transition: background-color 0.2s ease; */
 }
 .section-list ul li a {
   text-decoration: none;
@@ -67,4 +164,4 @@
 .active {
   color: #1db19f;
   font-weight: bold;
-}
+} */
