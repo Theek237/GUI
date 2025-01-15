@@ -1,15 +1,88 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../../Components/Header/Header";
-import { Link } from "react-router-dom";
 import InputBox from "../../Components/InputBox/InputBox";
 import Footer from "../../Components/Footer/Footer";
 import "./studentsignup.css";
 import signupimg from "../../assets/signup.svg";
+import axios from "axios";
 
-export default function StudentSignUp(props) {
+export default function StudentSignUp() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+  
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    password: "",
+    confirmpassword: "",
+  });
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const validateForm = () => {
+    if (!values.name || !values.email || !values.mobile || 
+        !values.password || !values.confirmpassword) {
+      setError("All fields are required");
+      return false;
+    }
+
+    if (values.password !== values.confirmpassword) {
+      setError("Passwords do not match");
+      return false;
+    }
+
+    if (values.password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/api/auth/studentsignup",
+        {
+          name: String(values.name),
+          email: String(values.email),
+          mobile: String(values.mobile),
+          password: String(values.password),
+          confirmpassword: String(values.confirmpassword),
+        }
+      );
+
+      if (response.data.message) {
+        alert("Registration Successful");
+        navigate("/studentsignin");
+      }
+    } catch (err) {
+      setError(err.response?.data?.error || "Registration failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    setError("");
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <div data-theme={isDarkMode ? "dark" : "light"}>
@@ -26,37 +99,60 @@ export default function StudentSignUp(props) {
         </div>
 
         <div className="signup-rightside">
-          <div className="signup-input">
-            <InputBox
-              type="text"
-              placeholder="Name"
-              src="src/assets/user.png"
-            />
-            <InputBox
-              type="email"
-              placeholder="Email"
-              src="src/assets/email.png"
-            />
-            <InputBox
-              type="password"
-              placeholder="Password"
-              src="src/assets/password.png"
-            />
-            <InputBox
-              type="password"
-              placeholder="Confirm Password"
-              src="src/assets/password.png"
-            />
-
-            <InputBox
-              type="text"
-              placeholder="Mobile Number"
-              src="src/assets/mobile.png"
-            />
-          </div>
-          <Link to="/student/dashboard">
-            <button className="signup-btn">Sign Up</button>
-          </Link>
+          <form onSubmit={handleSubmit}>
+            {error && <div className="error-message">{error}</div>}
+            
+            <div className="signup-input">
+              <InputBox
+                name="name"
+                value={values.name}
+                type="text"
+                placeholder="Name"
+                src="src/assets/user.png"
+                onChange={handleChange}
+              />
+              <InputBox
+                name="email"
+                value={values.email}
+                type="email"
+                placeholder="Email"
+                src="src/assets/email.png"
+                onChange={handleChange}
+              />
+              <InputBox
+                name="password"
+                value={values.password}
+                type="password"
+                placeholder="Password"
+                src="src/assets/password.png"
+                onChange={handleChange}
+              />
+              <InputBox
+                name="confirmpassword"
+                value={values.confirmpassword}
+                type="password"
+                placeholder="Confirm Password"
+                src="src/assets/password.png"
+                onChange={handleChange}
+              />
+              <InputBox
+                name="mobile"
+                value={values.mobile}
+                type="text"
+                placeholder="Mobile Number"
+                src="src/assets/mobile.png"
+                onChange={handleChange}
+              />
+            </div>
+            
+            <button 
+              className="signup-btn" 
+              disabled={loading}
+            >
+              {loading ? "Signing Up..." : "Sign Up"}
+            </button>
+          </form>
+          
           <p className="linktosignin">
             Already Have an Account?
             <span>

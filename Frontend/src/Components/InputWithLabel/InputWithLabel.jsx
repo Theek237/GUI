@@ -10,6 +10,8 @@ export default function InputWithLabel(props) {
         className="add-std-inputbox"
         onChange={props.onChange}
         value={props.value}
+        name={props.name}
+        
       />
     </div>
   );

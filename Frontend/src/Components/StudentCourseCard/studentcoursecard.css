@@ -1,0 +1,63 @@
+/* .sccbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  border-radius: 1.25rem;
+}
+
+.enroll-btn {
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: all 0.3s;
+  margin: 0.6rem 0;
+}
+
+.enroll-btn:hover {
+  background-color: #0056b3;
+} */
+
+.sccbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--background-color-two);
+}
+
+.enroll-btn {
+  background-color: var(--primary-text-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  margin: 0.6rem 0;
+  /* animation: cardAppear 0.5s ease-out; */
+}
+
+.enroll-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-text-color);
+}
+
+/* @keyframes cardAppear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */

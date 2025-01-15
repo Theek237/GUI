@@ -76,14 +76,14 @@
   position: relative;
 }
 
-.active::before {
+/* .active::before {
   content: "";
   position: absolute;
   left: 0;
   height: 100%;
   width: 3px;
   background-color: var(--primary-text-color);
-}
+} */
 
 /* Fade-in Keyframes */
 @keyframes fadeIn {

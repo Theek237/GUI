@@ -98,7 +98,7 @@ button {
 /* Add hover effect to the whitebox */
 .tawhitebox:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   border-color: var(--primary-text-color);
 }
 

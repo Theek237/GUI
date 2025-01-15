@@ -1,4 +1,4 @@
-// AddAnnouncement.jsx
+
 import React, { useState } from "react";
 import "./addannouncement.css";
 import "./modalstyles.css";
@@ -27,7 +27,7 @@ export default function AddAnnouncement({ onSuccess }) {
     axios
       .post("http://localhost:3001/api/announcement", values)
       .then(() => {
-        onSuccess && onSuccess(); // Safely call onSuccess if defined
+        onSuccess && onSuccess(); 
       })
       .catch(() => {
         setError("Error adding Announcement.");

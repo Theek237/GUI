@@ -1,15 +1,18 @@
 import React, { useEffect, useState, useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
 import "./teacherstudents.css";
+import "../../Components/EditStudent/modalstyles.css";
 import axios from "axios";
 import TeacherSideBar from "../../Components/TeacherSideBar/TeacherSideBar";
-import { Link } from "react-router-dom";
 import AddStudent from "../../Components/AddStudent/AddStudent";
+import EditStudent from "../../Components/EditStudent/EditStudent";
 
 export default function TeacherStudents() {
   const { isDarkMode } = useContext(ThemeContext);
   const [data, SetData] = useState([]);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [currentStudent, setCurrentStudent] = useState(null);
 
   useEffect(() => {
     fetchStudents();
@@ -28,6 +31,17 @@ export default function TeacherStudents() {
   function handleStudentAdded() {
     setShowCreateModal(false);
     fetchStudents();
+  }
+
+  function handleStudentEdited() {
+    setShowEditModal(false);
+    setCurrentStudent(null);
+    fetchStudents();
+  }
+
+  function editStudent(student) {
+    setCurrentStudent(student);
+    setShowEditModal(true);
   }
 
   function deleteStudent(delID) {
@@ -74,10 +88,12 @@ export default function TeacherStudents() {
                       <td>{student.StudentMobileNo}</td>
                       <td>
                         <div className="action-buttons">
-                          
-                          <Link to="/studentedit">
-                            <button className="edit-btn">Edit</button>
-                          </Link>
+                          <button
+                            className="edit-btn"
+                            onClick={() => editStudent(student)}
+                          >
+                            Update
+                          </button>
 
                           <button
                             className="delete-btn"
@@ -104,13 +120,31 @@ export default function TeacherStudents() {
           <div className="modal-overlay">
             <div className="modal-content">
               <button
-                className="close-btn"
+                className="cclose-btn"
                 onClick={() => setShowCreateModal(false)}
               >
                 ✕
               </button>
               {/* Render the AddStudent form here */}
               <AddStudent onSuccess={handleStudentAdded} />
+            </div>
+          </div>
+        )}
+        {showEditModal && (
+          <div className="modal-overlay">
+            <div className="modal-content">
+              <button
+                className="cclose-btn"
+                onClick={() => setShowEditModal(false)}
+              >
+                ✕
+              </button>
+              {/* Render the EditStudent form here */}
+              <EditStudent
+                student={currentStudent}
+                onSuccess={handleStudentEdited}
+                onCancel={() => setShowEditModal(false)}
+              />
             </div>
           </div>
         )}

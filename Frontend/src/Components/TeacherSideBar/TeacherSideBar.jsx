@@ -11,7 +11,7 @@ export default function TeacherSideBar() {
   const logoSrc = isDarkMode ? EduverseDark : EduverseLight;
 
   return (
-    <div data-theme={isDarkMode ? "dark" : "light"}>
+    <div  data-theme={isDarkMode ? "dark" : "light"}>
       <div className="sidebar-container">
         <div className="eduverse-logo">
           <img src={logoSrc} alt="logo" />

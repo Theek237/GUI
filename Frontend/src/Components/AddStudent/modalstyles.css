@@ -4,29 +4,36 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.4); 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
-  position: relative;
-
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1rem;
   border-radius: 0.5rem;
   min-width: 40rem;
   max-width: 50rem;
+  
+  
 }
 
-.close-btn {
-  position: absolute;
+  
+  
+.cclose-btn {
+  /* position: absolute; */
   top: 0.5rem;
   right: 0.5rem;
   border: none;
   background: none;
   font-size: 1.25rem;
   cursor: pointer;
+  /* margin-top: 2rem; */
 }
 
 .create-btn {

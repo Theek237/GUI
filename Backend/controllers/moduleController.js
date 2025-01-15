@@ -37,3 +37,28 @@ export const createModule = (req, res) => {
     res.json({ message: "Module created successfully" });
   });
 };
+
+// Update a module
+export const updateModule = (req, res) => {
+  const { module_code: oldModuleCode } = req.params; // Original module_code from URL
+  const { module_name, module_code: newModuleCode } = req.body; // New values from request body
+
+  console.log("PUT request received for module_code:", oldModuleCode);
+  console.log("Request body:", req.body);
+
+  // SQL query to update both module_name and module_code
+  const sql = "UPDATE modules SET module_name = ?, module_code = ? WHERE module_code = ?";
+
+  db.query(sql, [module_name, newModuleCode, oldModuleCode], (err, result) => {
+    if (err) {
+      console.error("Error updating module:", err);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "Module not found" });
+    }
+
+    res.json({ message: "Module updated successfully" });
+  });
+};

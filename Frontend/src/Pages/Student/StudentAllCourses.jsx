@@ -8,6 +8,15 @@ import StudentCourseCard from "../../Components/StudentCourseCard/StudentCourseC
 export default function StudentAllCourses() {
   const { isDarkMode } = useContext(ThemeContext);
   const [data, setData] = useState([]);
+  const [enrolledCourses, setEnrolledCourses] = useState([]);
+
+  const enrollInCourse = (module_code) => {
+    setEnrolledCourses((prev) => [...prev, module_code]);
+  };
+
+  const isEnrolled = (module_code) => {
+    return enrolledCourses.includes(module_code);
+  };
 
   useEffect(() => {
     fetchCourses();
@@ -35,7 +44,8 @@ export default function StudentAllCourses() {
                   key={modules.module_code}
                   module_code={modules.module_code}
                   module_name={modules.module_name}
-                  
+                  onEnroll={() => enrollInCourse(modules.module_code)}
+                  isEnrolled={isEnrolled(modules.module_code)}
                 />
               ))
             ) : (

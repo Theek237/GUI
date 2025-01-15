@@ -20,7 +20,12 @@ export default function CourseCard(props) {
               >
                 Delete
               </button>
-              <button className="edit-btn">Edit</button>
+              <button
+                className="edit-btn"
+                onClick={() => props.onEdit(props.module_code)}
+              >
+                Edit
+              </button>
             </div>
           </div>
         </div>

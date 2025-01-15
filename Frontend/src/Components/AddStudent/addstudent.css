@@ -5,22 +5,28 @@
   /* min-height: 100vh; */
   /* background-color: #f9f9f9; */
   /* padding: 2rem; */
+  min-width: 38rem;
+  background-color: var(--background-color-two);
 }
 
 .add-student-form {
-  background-color: #fff;
+  background-color: var(--background-color-two);
   border-radius: 8px;
   width: 100%;
   max-width: 500px;
   padding: 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.add-student-form *{
+  background-color: var(--background-color-two);
+  
+}
 
 .form-title {
   margin-bottom: 1.5rem;
   text-align: center;
-  color: #1f2128;
-  background-color: white;
+  color: var(--secondary-text-color);
+  background-color: var(--background-color-two);
 }
 
 .error-message {
@@ -36,7 +42,7 @@
   padding: 0.75rem;
   border: none;
   border-radius: 0.5625rem;
-  background: #1db19f;
+  background: var(--primary-text-color);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;

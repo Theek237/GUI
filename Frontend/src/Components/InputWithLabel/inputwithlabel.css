@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
+  background-color: var(--background-color-two);
 }
 .inputwithlabel-container label {
-  color: var(--Darker, #1f2128);
-  background-color: white;
+  color: var(--secondary-text-color);
+  background-color: var(--background-color-two);
   font-family: Inter;
   font-size: 1rem;
   font-style: normal;
@@ -19,9 +19,9 @@
   width: 100%;
   height: 3rem;
   flex-shrink: 0;
-  border: 1px solid #1db19f;
+  border: 1px solid var(--primary-text-color);
   border-radius: 0.4375rem;
-  background: #fff;
+  background: var(--background-color-two);
 
   margin-bottom: 1.94rem;
   padding-left: 1rem;
