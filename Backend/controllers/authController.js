@@ -1,5 +1,10 @@
 import db from "../models/db.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+
+const jwteduverse = "jwteduverse";
+
+//STUDENT----------------------------------------------------------------------
 
 export const studentSignUp = async (req, res) => {
   const { name, email, mobile, password, confirmpassword } = req.body;
@@ -14,7 +19,9 @@ export const studentSignUp = async (req, res) => {
   }
 
   if (password.length < 6) {
-    return res.status(400).json({ error: "Password must be at least 6 characters long" });
+    return res
+      .status(400)
+      .json({ error: "Password must be at least 6 characters long" });
   }
 
   try {
@@ -33,7 +40,9 @@ export const studentSignUp = async (req, res) => {
         db.query(studentQuery, [name, email, mobile], (err, result) => {
           if (err) {
             return db.rollback(() => {
-              res.status(500).json({ error: "Failed to create student record" });
+              res
+                .status(500)
+                .json({ error: "Failed to create student record" });
             });
           }
 
@@ -48,7 +57,9 @@ export const studentSignUp = async (req, res) => {
             (err, result) => {
               if (err) {
                 return db.rollback(() => {
-                  res.status(500).json({ error: "Failed to create auth record" });
+                  res
+                    .status(500)
+                    .json({ error: "Failed to create auth record" });
                 });
               }
 
@@ -56,10 +67,14 @@ export const studentSignUp = async (req, res) => {
               db.commit((err) => {
                 if (err) {
                   return db.rollback(() => {
-                    res.status(500).json({ error: "Failed to commit transaction" });
+                    res
+                      .status(500)
+                      .json({ error: "Failed to commit transaction" });
                   });
                 }
-                res.status(200).json({ message: "Student registered successfully" });
+                res
+                  .status(200)
+                  .json({ message: "Student registered successfully" });
               });
             }
           );
@@ -71,5 +86,52 @@ export const studentSignUp = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ error: "Failed to hash password" });
+  }
+};
+
+export const studentSignIn = async (req, res) => {
+  console.log("Received request body:", req.body); // Add this line
+
+  const { email, password } = req.body;
+
+  // Basic validation checks
+  if (!email || !password) {
+    console.log("Validation failed:", { email, password }); // Add this line
+
+    return res.status(400).json({ error: "All fields are required" });
+  }
+
+  try {
+    // Check if the user exists in the student_auth table
+    const checkQuery = "SELECT * FROM student_auth WHERE email = ?";
+    db.query(checkQuery, [email], async (err, results) => {
+      if (err) {
+        return res.status(500).json({ error: "Database error" });
+      }
+
+      // If no user record is found
+      if (results.length === 0) {
+        return res.status(400).json({ error: "Invalid email or password" });
+      }
+
+      const user = results[0];
+      console.log("User found:", user);
+      // Compare the hashed password with the entered password
+      const match = await bcrypt.compare(password, user.password_hash);
+      if (!match) {
+        return res.status(400).json({ error: "Invalid email or password" });
+      }
+      // Create a JWT with user ID or any other relevant payload
+      const token = jwt.sign(
+        { userauthId: user.auth_id }, // payload (store minimal user info)
+        jwteduverse, // secret key
+        { expiresIn: "6h" } // token expiration time
+      );
+
+      // If passwords match, respond with success
+      res.status(200).json({ message: "Login successful", token: token });
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
   }
 };
