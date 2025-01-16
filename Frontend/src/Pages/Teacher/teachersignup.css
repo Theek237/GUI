@@ -216,3 +216,27 @@
   display: flex;
   gap: 3px;
 }
+
+.error-message {
+  color: #ff3333;
+  background-color: #ffebee;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+[data-theme="dark"] .error-message {
+  background-color: rgba(255, 51, 51, 0.1);
+  color: #ff6666;
+}
+
+.signup-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+[data-theme="dark"] .signup-btn:disabled {
+  background-color: #444444;
+}

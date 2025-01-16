@@ -8,25 +8,95 @@ import InputBox from "../../Components/InputBox/InputBox";
 import Footer from "../../Components/Footer/Footer";
 import "./teachersignup.css";
 import signupimg from "../../assets/signup.svg";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function TeacherSignUp() {
-  const [formValues, setFormValues] = useState({
+  const [values, setValues] = useState({
     name: "",
     email: "",
-    password: "",
-    confirmPassword: "",
     mobile: "",
+    password: "",
+    confirmpassword: "",
   });
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormValues({ ...formValues, [name]: value });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(formValues);
+  // };
+  const validateForm = () => {
+    if (
+      !values.name ||
+      !values.email ||
+      !values.mobile ||
+      !values.password ||
+      !values.confirmpassword
+    ) {
+      setError("All fields are required");
+      return false;
+    }
+
+    if (values.password !== values.confirmpassword) {
+      setError("Passwords do not match");
+      return false;
+    }
+
+    if (values.password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return false;
+    }
+
+    return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formValues);
+    setError("");
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/api/auth/teachersignup",
+        {
+          name: String(values.name),
+          email: String(values.email),
+          mobile: String(values.mobile),
+          password: String(values.password),
+          confirmpassword: String(values.confirmpassword),
+        }
+      );
+
+      if (response.data.message) {
+        alert("Registration Successful");
+        navigate("/studentsignin");
+      }
+    } catch (err) {
+      setError(err.response?.data?.error || "Registration failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    setError("");
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -45,38 +115,40 @@ export default function TeacherSignUp() {
 
         <div className="signup-rightside">
           <form onSubmit={handleSubmit}>
+            {error && <div className="error-message">{error}</div>}
+
             <div className="signup-input">
               <InputBox
                 name="name"
                 type="text"
                 placeholder="Name"
                 src="src/assets/user.png"
-                value={formValues.name}
-                onChange={handleInputChange}
+                value={values.name}
+                onChange={handleChange}
               />
               <InputBox
                 name="email"
                 type="email"
                 placeholder="Email"
                 src="src/assets/email.png"
-                value={formValues.email}
-                onChange={handleInputChange}
+                value={values.email}
+                onChange={handleChange}
               />
               <InputBox
                 name="password"
                 type="password"
                 placeholder="Password"
                 src="src/assets/password.png"
-                value={formValues.password}
-                onChange={handleInputChange}
+                value={values.password}
+                onChange={handleChange}
               />
               <InputBox
-                name="confirmPassword"
+                name="confirmpassword"
                 type="password"
                 placeholder="Confirm Password"
                 src="src/assets/password.png"
-                value={formValues.confirmPassword}
-                onChange={handleInputChange}
+                value={values.confirmpassword}
+                onChange={handleChange}
               />
 
               <InputBox
@@ -84,13 +156,15 @@ export default function TeacherSignUp() {
                 type="text"
                 placeholder="Mobile Number"
                 src="src/assets/mobile.png"
-                value={formValues.mobile}
-                onChange={handleInputChange}
+                value={values.mobile}
+                onChange={handleChange}
               />
             </div>
 
             {/* <Link to="/teacher/dashboard"> */}
-            <button className="signup-btn">Sign Up</button>
+            <button className="signup-btn" disabled={loading}>
+              {loading ? "Signing Up..." : "Sign Up"}
+            </button>
             {/* </Link> */}
           </form>
           <p className="linktosignin">

@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./studentprofile.css";
 
 export default function StudentProfile() {
   const [profile, setProfile] = useState(null);
@@ -45,24 +47,24 @@ export default function StudentProfile() {
 
   // Once fetched, display the data
   return (
-    <div>
-      <h2>Student Profile</h2>
-      <div>
+    <div className="student-profile-container">
+      <h2 className="student-profile-title">Student Profile</h2>
+      <div className="student-profile-item">
         <strong>Auth ID:</strong> {profile.auth_id}
       </div>
-      <div>
+      <div className="student-profile-item">
         <strong>Student ID:</strong> {profile.StudentID}
       </div>
-      <div>
+      <div className="student-profile-item">
         <strong>Name:</strong> {profile.StudentName}
       </div>
-      <div>
+      <div className="student-profile-item">
         <strong>Email:</strong> {profile.StudentEmail || profile.email}
       </div>
-      <div>
+      <div className="student-profile-item">
         <strong>Mobile Number:</strong> {profile.StudentMobileNo}
       </div>
-      <div>
+      <div className="student-profile-item">
         <strong>Created At:</strong> {profile.created_at}
       </div>
     </div>

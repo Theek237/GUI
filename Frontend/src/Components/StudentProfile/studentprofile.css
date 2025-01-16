@@ -1,0 +1,22 @@
+/* studentprofile.css */
+.student-profile-container {
+    padding: 2rem;
+    background-color: var(--background-color-two);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-profile-title {
+    text-align: center;
+    color: var(--secondary-text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .student-profile-item {
+    margin-bottom: 1rem;
+    color: var(--primary-text-color);
+  }
+  
+  .student-profile-item strong {
+    color: var(--secondary-text-color);
+  }
