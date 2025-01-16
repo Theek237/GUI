@@ -5,6 +5,7 @@ import announcementRoutes from "./routes/announcementRoutes.js";
 import moduleRoutes from "./routes/moduleRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import studentProfileRoutes from "./routes/studentProfileRoutes.js";
+import teacherProfileRoutes from "./routes/teacherProfileRoutes.js";
 const app = express();
 
 // Middleware
@@ -17,5 +18,6 @@ app.use("/api/announcement", announcementRoutes);
 app.use("/api/module", moduleRoutes);
 app.use("/api/auth",authRoutes);
 app.use("/api/studentprofile",studentProfileRoutes);
+app.use("/api/teacherprofile",teacherProfileRoutes)
 
 export default app;

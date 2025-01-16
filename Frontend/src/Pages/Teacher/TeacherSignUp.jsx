@@ -82,7 +82,7 @@ export default function TeacherSignUp() {
 
       if (response.data.message) {
         alert("Registration Successful");
-        navigate("/studentsignin");
+        navigate("/teachersignin");
       }
     } catch (err) {
       setError(err.response?.data?.error || "Registration failed");

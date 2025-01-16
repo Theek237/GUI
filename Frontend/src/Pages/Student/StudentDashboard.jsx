@@ -6,8 +6,7 @@ import "./studentdashboard.css";
 import bookimg from "../../Assets/bookimg.svg";
 import filter from "../../Assets/filter.svg";
 import StudentSideBar from "../../Components/StudentSideBar/StudentSideBar";
-// import "./studentdashboard.css";
-// import StudentProfile from "../../Components/StudentProfile/StudentProfile";
+
 
 export default function StudentDashboard() {
   const [profile, setProfile] = useState(null);
@@ -69,7 +68,7 @@ export default function StudentDashboard() {
               <img src={filter} alt="filter" className="filter" />
             </div>
             <div className="motitext">
-              <h2>“The expert in anything was once a beginner.”</h2>
+              <h2><span>“</span>The expert in anything was once a beginner.<span>”</span></h2>
               <h3>– Helen Hayes</h3>
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function TeacherSignIn() {
         const token = response.data.token;
         localStorage.setItem("token", token);
         alert("Login Successful");
-        navigate("/student/dashboard");
+        navigate("/teacher/dashboard");
       }
     } catch (err) {
       // setError("Invalid Credentials");
@@ -104,7 +104,9 @@ export default function TeacherSignIn() {
               />
             </div>
             {/* <Link to="/teacher/dashboard"> */}
-            <button className="signin-btn" disabled={loading}>Sign In</button>
+            <button className="signin-btn" disabled={loading}>
+              Sign In
+            </button>
             {/* </Link> */}
           </form>
           <p className="linktosignup">
