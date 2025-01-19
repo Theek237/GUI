@@ -6,14 +6,17 @@ import ButtonTwo from "../../Components/ButtonTwo/ButtonTwo";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
+// import gradimg from "../../assets/grad.svg";
 
 export default function Home() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div data-theme={isDarkMode ? "dark" : "light"}>
+    <div data-theme={isDarkMode ? "dark" : "light"} className="home">
       <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
+      {/* <img src={gradimg} alt="grad" className="gradi" /> */}
       <div className="heroSection">
+        <div className="gradi"></div>
         <div className="leftSide">
           <h1 className="welcome">
             Welcome To <span>Eduverse</span>
