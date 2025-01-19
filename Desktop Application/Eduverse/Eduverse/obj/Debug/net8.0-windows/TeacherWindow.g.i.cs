@@ -93,7 +93,7 @@ namespace Eduverse {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Eduverse;component/teacherwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Eduverse;V1.0.0.0;component/teacherwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TeacherWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
