@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DhC5FDh6adw=",
+  "dgSpecHash": "ERIUvLOGdjc=",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Eduverse.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.12\\microsoft.entityframeworkcore.8.0.12.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.12\\microsoft.entityframeworkcore.abstractions.8.0.12.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.12\\microsoft.entityframeworkcore.analyzers.8.0.12.nupkg.sha512",

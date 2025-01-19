@@ -1,15 +1,18 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Linq;
+using BCrypt.Net; // Make sure to add BCrypt.Net-Next NuGet package
 
 namespace Eduverse
 {
     public partial class StudentWindow : Window
     {
+        private const string DEFAULT_PASSWORD = "123456";
+
         public StudentWindow()
         {
             InitializeComponent();
-            Read(); // Load data when window opens
+            Read();
         }
 
         public void Create()
@@ -22,11 +25,42 @@ namespace Eduverse
 
                 if (name != null && email != null && mobile != null)
                 {
-                    context.Students.Add(new Student() { Name = name, Email = email, Mobile = mobile });
-                    context.SaveChanges();
-                    MessageBox.Show("Student added successfully!");
-                    ClearForm();
-                    Read(); // Refresh the grid
+                    // Begin transaction to ensure both operations succeed or fail together
+                    using (var transaction = context.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Create student
+                            var student = new Student()
+                            {
+                                Name = name,
+                                Email = email,
+                                Mobile = mobile
+                            };
+                            context.Students.Add(student);
+                            context.SaveChanges();
+
+                            // Create student auth with default password
+                            var studentAuth = new StudentAuth()
+                            {
+                                Id = student.Id,
+                                Email = email,
+                                HPassword = BCrypt.Net.BCrypt.HashPassword(DEFAULT_PASSWORD)
+                            };
+                            context.StudentAuths.Add(studentAuth);
+                            context.SaveChanges();
+
+                            transaction.Commit();
+                            MessageBox.Show("Student added successfully!");
+                            ClearForm();
+                            Read();
+                        }
+                        catch (System.Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show($"Error creating student: {ex.Message}");
+                        }
+                    }
                 }
             }
         }
@@ -50,14 +84,32 @@ namespace Eduverse
 
                 if (selectedStudent != null && name != null && email != null && mobile != null)
                 {
-                    Student student = context.Students.Find(selectedStudent.Id);
-                    student.Name = name;
-                    student.Email = email;
-                    student.Mobile = mobile;
-                    context.SaveChanges();
-                    MessageBox.Show("Student updated successfully!");
-                    ClearForm();
-                    Read(); // Refresh the grid
+                    using (var transaction = context.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Update student
+                            Student student = context.Students.Find(selectedStudent.Id);
+                            student.Name = name;
+                            student.Email = email;
+                            student.Mobile = mobile;
+
+                            // Update student auth email
+                            StudentAuth studentAuth = context.StudentAuths.Single(x => x.Id == selectedStudent.Id);
+                            studentAuth.Email = email;
+
+                            context.SaveChanges();
+                            transaction.Commit();
+                            MessageBox.Show("Student updated successfully!");
+                            ClearForm();
+                            Read();
+                        }
+                        catch (System.Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show($"Error updating student: {ex.Message}");
+                        }
+                    }
                 }
             }
         }
@@ -69,16 +121,48 @@ namespace Eduverse
                 Student selectedStudent = StudentDataGrid.SelectedItem as Student;
                 if (selectedStudent != null)
                 {
-                    Student student = context.Students.Single(x => x.Id == selectedStudent.Id);
-                    context.Remove(student);
-                    context.SaveChanges();
-                    MessageBox.Show("Student deleted successfully!");
-                    ClearForm();
-                    Read(); // Refresh the grid
+                    using (var transaction = context.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Find both records first
+                            var student = context.Students.Find(selectedStudent.Id);
+                            var studentAuth = context.StudentAuths.FirstOrDefault(x => x.Id == selectedStudent.Id);
+
+                            if (student != null)
+                            {
+                                // Delete auth record first if it exists
+                                if (studentAuth != null)
+                                {
+                                    context.StudentAuths.Remove(studentAuth);
+                                    context.SaveChanges();
+                                }
+
+                                // Then delete student record
+                                context.Students.Remove(student);
+                                context.SaveChanges();
+
+                                transaction.Commit();
+                                MessageBox.Show("Student deleted successfully!");
+                                ClearForm();
+                                Read();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Student not found!");
+                            }
+                        }
+                        catch (System.Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show($"Error deleting student: {ex.Message}\nInner Exception: {ex.InnerException?.Message}");
+                        }
+                    }
                 }
             }
         }
 
+        // Existing methods remain unchanged
         private void ClearForm()
         {
             StudentIdTextBox.Clear();
@@ -87,7 +171,6 @@ namespace Eduverse
             StudentMobileTextBox.Clear();
         }
 
-        // Event Handlers
         private void StdCreate_Click(object sender, RoutedEventArgs e)
         {
             Create();

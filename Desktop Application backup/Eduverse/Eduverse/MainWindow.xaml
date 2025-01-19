@@ -1,0 +1,15 @@
+﻿<Window x:Class="Eduverse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Eduverse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Manage Students" Width="150" Margin="0,0,0,10" Click="BtnStudents_Click"/>
+            <!--<Button Content="Manage Teachers" Width="150" Click="OpenTeacherWindow"/>-->
+        </StackPanel>
+    </Grid>
+</Window>

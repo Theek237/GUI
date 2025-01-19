@@ -1,0 +1,182 @@
+﻿<Window x:Class="Eduverse.TeacherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Eduverse"
+        mc:Ignorable="d"
+        Title="Teacher Management" 
+        Height="650" 
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#e9eff6">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#1f2128"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#e9eff6"/>
+            <Setter Property="Background" Value="#ffffff"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+
+        <Style x:Key="CreateButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Margin" Value="0,0,15,0"/>
+            <Setter Property="Background" Value="#1db19f"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.85"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="UpdateButton" TargetType="Button" BasedOn="{StaticResource CreateButton}">
+            <Setter Property="Background" Value="#1f2128"/>
+        </Style>
+
+        <Style x:Key="DeleteButton" TargetType="Button" BasedOn="{StaticResource CreateButton}">
+            <Setter Property="Background" Value="#dc3545"/>
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="#ffffff"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#e9eff6"/>
+            <Setter Property="RowBackground" Value="#ffffff"/>
+            <Setter Property="AlternatingRowBackground" Value="#e9eff6"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#e9eff6"/>
+            <Setter Property="VerticalGridLinesBrush" Value="#e9eff6"/>
+            <Setter Property="RowHeight" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="ColumnWidth" Value="*"/>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="#ffffff"
+            Margin="20" 
+            CornerRadius="10" 
+            BorderThickness="1" 
+            BorderBrush="#e9eff6">
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" 
+                    Background="#ffffff"
+                    CornerRadius="8" 
+                    Padding="25" 
+                    Margin="0,0,0,20"
+                    BorderThickness="1"
+                    BorderBrush="#e9eff6">
+
+                <StackPanel>
+                    <TextBlock Text="Teacher Information" 
+                             FontSize="26" 
+                             FontWeight="SemiBold"
+                             Foreground="#1db19f"
+                             Margin="0,0,0,25"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="ID"/>
+                            <TextBox Name="TeacherIdTextBox" IsEnabled="False"/>
+
+                            <TextBlock Text="Name"/>
+                            <TextBox Name="TeacherNameTextBox"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="Email"/>
+                            <TextBox Name="TeacherEmailTextBox"/>
+
+                            <TextBlock Text="Mobile No"/>
+                            <TextBox Name="TeacherMobileTextBox"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal" 
+                              HorizontalAlignment="Right" 
+                              Margin="0,20,0,0">
+                        <Button Content="Create" Style="{StaticResource CreateButton}" Click="TeacherCreate_Click"/>
+                        <Button Content="Update" Style="{StaticResource UpdateButton}" Click="TeacherUpdate_Click"/>
+                        <Button Content="Delete" Style="{StaticResource DeleteButton}" Click="TeacherDelete_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" 
+                    Background="#ffffff"
+                    CornerRadius="8" 
+                    Padding="25"
+                    BorderThickness="1"
+                    BorderBrush="#e9eff6">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Teachers List" 
+                             FontSize="22" 
+                             FontWeight="SemiBold"
+                             Foreground="#1db19f"
+                             Margin="0,0,0,15"/>
+
+                    <DataGrid Name="TeacherDataGrid" 
+                             Grid.Row="1"
+                             AutoGenerateColumns="True"
+                             SelectionChanged="TeacherSelectionChanged"
+                             SelectionMode="Single"
+                             IsReadOnly="True"
+                             CanUserResizeRows="False"
+                             ColumnHeaderHeight="45"
+                             HeadersVisibility="Column"
+                             GridLinesVisibility="All"
+                             HorizontalGridLinesBrush="#e9eff6"
+                             VerticalGridLinesBrush="#e9eff6"
+                             ColumnWidth="*">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#e9eff6"/>
+                                <Setter Property="Foreground" Value="#1f2128"/>
+                                <Setter Property="Padding" Value="15,0"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="MinWidth" Value="100"/>
+                            </Style>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Padding" Value="15,5"/>
+                                <Setter Property="FontSize" Value="14"/>
+                            </Style>
+                        </DataGrid.Resources>
+                    </DataGrid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

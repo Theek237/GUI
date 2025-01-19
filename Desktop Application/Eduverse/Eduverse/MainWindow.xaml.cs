@@ -22,9 +22,13 @@ namespace Eduverse
         }
         private void BtnStudents_Click(object sender, RoutedEventArgs e)
         {
-            // Open StudentWindow
             StudentWindow studentWindow = new StudentWindow();
             studentWindow.Show();
+        }
+        private void BtnTeachers_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherWindow teacherWindow = new TeacherWindow();
+            teacherWindow.Show();
         }
     }
 }

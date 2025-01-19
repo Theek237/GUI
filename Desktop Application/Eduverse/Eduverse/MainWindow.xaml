@@ -5,11 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eduverse"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="Manage Students" Width="150" Margin="0,0,0,10" Click="BtnStudents_Click"/>
-            <!--<Button Content="Manage Teachers" Width="150" Click="OpenTeacherWindow"/>-->
-        </StackPanel>
-    </Grid>
+        Title="Eduverse" 
+        Height="650" 
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#e9eff6">
+
+    <Border Background="#ffffff"
+            Margin="20" 
+            CornerRadius="10" 
+            BorderThickness="1" 
+            BorderBrush="#e9eff6">
+        <Grid>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Eduverse" 
+                          FontSize="48" 
+                          FontWeight="Bold"
+                          Foreground="#1db19f"
+                          HorizontalAlignment="Center"
+                          Margin="0,0,0,60"/>
+
+                <StackPanel VerticalAlignment="Center" 
+                          HorizontalAlignment="Center">
+                    <Button Content="Manage Students" 
+                            Width="200"
+                            Height="45" 
+                            Margin="0,0,0,20"
+                            Click="BtnStudents_Click"
+                            Background="#1db19f"
+                            Foreground="White"
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            BorderThickness="0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Opacity" Value="0.85"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <Button Content="Manage Teachers" 
+                            Width="200"
+                            Height="45"
+                            Click="BtnTeachers_Click"
+                            Background="#1db19f"
+                            Foreground="White"
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            BorderThickness="0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Opacity" Value="0.85"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\studentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\studentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\teacherwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\teacherwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\studentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\studentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\teacherwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\teacherwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\studentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\studentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\teacherauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\teacherauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\studentauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\studentauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|c:\\users\\asus\\desktop\\gui lms\\desktop application\\eduverse\\eduverse\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A81BAD9-67E2-4A02-A748-5D7F093E9331}|Eduverse\\Eduverse.csproj|solutionrelative:eduverse\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +54,146 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Eduverse\\StudentWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentWindow.xaml.cs",
-              "RelativeToolTip": "Eduverse\\StudentWindow.xaml.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAwwC0AAABSAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Eduverse\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Eduverse\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T06:15:28.347Z",
+              "WhenOpened": "2025-01-19T09:34:44.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\DataContext.cs",
-              "RelativeDocumentMoniker": "Eduverse\\DataContext.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\DataContext.cs",
-              "RelativeToolTip": "Eduverse\\DataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T06:15:55.057Z",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Eduverse\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\MainWindow.xaml*",
+              "RelativeToolTip": "Eduverse\\MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-19T09:32:53.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Student.cs",
-              "RelativeDocumentMoniker": "Eduverse\\Student.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Student.cs",
-              "RelativeToolTip": "Eduverse\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\DataContext.cs",
+              "RelativeDocumentMoniker": "Eduverse\\DataContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\DataContext.cs",
+              "RelativeToolTip": "Eduverse\\DataContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA7wBsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T06:15:41.937Z",
+              "WhenOpened": "2025-01-19T09:31:33.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "TeacherWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\TeacherWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Eduverse\\TeacherWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\TeacherWindow.xaml.cs",
+              "RelativeToolTip": "Eduverse\\TeacherWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T09:31:09.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Eduverse\\StudentWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentWindow.xaml.cs",
+              "RelativeToolTip": "Eduverse\\StudentWindow.xaml.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAowMgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T09:25:24.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "StudentWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentWindow.xaml",
               "RelativeDocumentMoniker": "Eduverse\\StudentWindow.xaml",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentWindow.xaml",
               "RelativeToolTip": "Eduverse\\StudentWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-19T06:15:13.867Z",
+              "WhenOpened": "2025-01-19T09:23:27.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Eduverse\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\MainWindow.xaml",
-              "RelativeToolTip": "Eduverse\\MainWindow.xaml",
+              "DocumentIndex": 5,
+              "Title": "TeacherWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\TeacherWindow.xaml",
+              "RelativeDocumentMoniker": "Eduverse\\TeacherWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\TeacherWindow.xaml",
+              "RelativeToolTip": "Eduverse\\TeacherWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-19T06:13:36.666Z",
+              "WhenOpened": "2025-01-19T09:23:16.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentAuth.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentAuth.cs",
+              "RelativeDocumentMoniker": "Eduverse\\StudentAuth.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\StudentAuth.cs",
+              "RelativeToolTip": "Eduverse\\StudentAuth.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T09:21:34.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TeacherAuth.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\TeacherAuth.cs",
+              "RelativeDocumentMoniker": "Eduverse\\TeacherAuth.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\TeacherAuth.cs",
+              "RelativeToolTip": "Eduverse\\TeacherAuth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T09:21:24.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Student.cs",
+              "RelativeDocumentMoniker": "Eduverse\\Student.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Student.cs",
+              "RelativeToolTip": "Eduverse\\Student.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T09:20:17.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Teacher.cs",
+              "RelativeDocumentMoniker": "Eduverse\\Teacher.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\GUI LMS\\Desktop Application\\Eduverse\\Eduverse\\Teacher.cs",
+              "RelativeToolTip": "Eduverse\\Teacher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T09:19:23.269Z",
               "EditorCaption": ""
             }
           ]

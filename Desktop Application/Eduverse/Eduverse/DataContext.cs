@@ -5,7 +5,9 @@ namespace Eduverse
     internal class DataContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
-
+        public DbSet<StudentAuth> StudentAuths { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<TeacherAuth> TeacherAuths { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(
@@ -18,6 +20,12 @@ namespace Eduverse
         {
             modelBuilder.Entity<Student>()
                 .ToTable("student");
+            modelBuilder.Entity<StudentAuth>()
+                .ToTable("student_auth");
+            modelBuilder.Entity<Teacher>()
+                .ToTable("teacher");
+            modelBuilder.Entity<TeacherAuth>()
+                .ToTable("teacher_auth");
         }
     }
 }

@@ -37,3 +37,6 @@ C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\obj\Debug\ne
 C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\obj\Debug\net8.0-windows\Eduverse.pdb
 C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\obj\Debug\net8.0-windows\Eduverse.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\obj\Debug\net8.0-windows\ref\Eduverse.dll
+C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\obj\Debug\net8.0-windows\TeacherWindow.g.cs
+C:\Users\ASUS\Desktop\GUI LMS\Desktop Application\Eduverse\Eduverse\obj\Debug\net8.0-windows\TeacherWindow.baml
