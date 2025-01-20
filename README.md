@@ -49,12 +49,18 @@
       <li>Configure a MySQL database and import the provided schema.</li>
     </ul>
   </li>
+
   <li>Start the servers:
     <ul>
-      <li>Frontend: <code>npm run dev</code> in the <code>frontend/</code> directory.</li>
-      <li>Backend: <code>npm start</code> in the <code>backend/</code> directory.</li>
+      <li>Frontend:  
+        <pre><code>npm run dev</code></pre>
+      </li>
+      <li>Backend:
+        <pre><code>npm start</code></pre>
+      </li>
     </ul>
   </li>
+
 </ol>
 
 ---
