@@ -10,7 +10,7 @@ export default function StudentSideBar() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const logosrc = isDarkMode ? EduverseDark : EduverseLight;
   return (
-    <div data-theme={isDarkMode ? "dark" : "light"}>
+    <div className="sb" data-theme={isDarkMode ? "dark" : "light"}>
       <div className="sidebar-container">
         <div className="eduverse-logo">
           <img src={logosrc} alt="logo" />

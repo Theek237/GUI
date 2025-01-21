@@ -27,3 +27,31 @@
 [data-theme="dark"] .input-icon {
   filter: invert(1);
 }
+.inputbox-container input {
+  width: 100%;
+  height: 3rem;
+  /* flex-shrink: 0; */
+  border: 1px solid var(--primary-text-color);
+  /* border-radius: 0.4375rem; */
+  background: var(--background-color-two);
+  /* color: yellow; */
+}
+
+.inputbox-container input:-webkit-autofill {
+  background-color: var(--background-color-two) !important;
+  box-shadow: 0 0 0px 100px var(--background-color-two) inset !important;
+  color: var(--secondary-text-color) !important; /* Ensures text is white */
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Prevent browser reset */
+}
+
+.inputbox-container input:-webkit-autofill:focus {
+  background-color: var(--background-color-two) !important;
+  box-shadow: 0 0 0px 100px var(--background-color-two) inset !important;
+  color: var(--secondary-text-color) !important;
+}
+
+.inputbox-container input:-webkit-autofill:hover {
+  background-color: var(--background-color-two) !important;
+  box-shadow: 0 0 0px 100px var(--background-color-two) inset !important;
+  color: var(--secondary-text-color) !important;
+}

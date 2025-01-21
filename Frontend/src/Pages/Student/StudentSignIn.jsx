@@ -37,8 +37,7 @@ export default function StudentSignIn() {
     }
 
     setLoading(true);
-    console.log("Sending request with:", values); // Add this line
-
+    console.log("Sending request with:", values); 
     try {
       const response = await axios.post(
         "http://localhost:3001/api/auth/studentsignin",
@@ -54,7 +53,6 @@ export default function StudentSignIn() {
         navigate("/student/dashboard");
       }
     } catch (err) {
-      // setError("Invalid Credentials");
       setError(err.response?.data?.error || "Login failed");
     } finally {
       setLoading(false);
@@ -104,11 +102,9 @@ export default function StudentSignIn() {
                 onChange={handleChange}
               />
             </div>
-            {/* <Link to="/student/dashboard"> */}
             <button className="signin-btn" disabled={loading}>
               Sign In
             </button>
-            {/* </Link> */}
           </form>
           <p className="linktosignup">
             Don’t Have an Account?{" "}

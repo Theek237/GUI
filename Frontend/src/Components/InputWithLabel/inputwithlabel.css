@@ -6,6 +6,7 @@
 }
 .inputwithlabel-container label {
   color: var(--secondary-text-color);
+
   background-color: var(--background-color-two);
   font-family: Inter;
   font-size: 1rem;
@@ -26,3 +27,4 @@
   margin-bottom: 1.94rem;
   padding-left: 1rem;
 }
+

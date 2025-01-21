@@ -67,3 +67,6 @@
   color: #1db19f;
   font-weight: bold;
 } */
+.sb {
+  background-color: var(--background-color-two);
+}
